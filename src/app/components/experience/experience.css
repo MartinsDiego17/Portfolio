@@ -1,0 +1,18 @@
+.experienceContainer {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 0;
+    color: #eee;
+    margin-bottom: 5%;
+}
+
+.experienceContainer h1 {
+    margin-bottom: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.experienceContainer h1 i {
+    color: #09f;
+    padding-left: 5px;
+}

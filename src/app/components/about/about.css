@@ -1,0 +1,49 @@
+.aboutContainer {
+    padding: 2% 10%;
+    color: white;
+    background-color: #051725;
+    margin-bottom: 15%;
+}
+
+.aboutContainer h1 {
+    font-size: 2.3em;
+    font-style: italic;
+}
+
+.aboutContainer p {
+    font-weight: 300;
+    width: 75%;
+    color: #ccc;
+}
+
+.aboutContainer .stackTechs section {
+    margin-top: 2%;
+    width: 75%;
+    display: flex;
+}
+
+.aboutContainer .stackTechs section article h3 {
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.stackTechs .education {
+    margin-right: 20%;
+}
+
+.stackTechs .education h2 {
+    margin-bottom: 0;
+}
+
+.stackTechs .technologiesStack div{
+    gap: 5%;
+    display: flex;
+}
+
+.stackTechs img {
+    transition: .2s;
+}
+
+.stackTechs img:hover {
+    transform: scale(1.1);
+}

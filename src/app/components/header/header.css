@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+.headerContainer {
+    background-color: rgb(0 0 0 / 85%);
+    background-color: transparent;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    position: fixed;
+    margin-top: -10%;
+    width: 100vw;
+}
+
+.headerContainer h1 {
+    margin-left: 10%;
+    font-size: 2rem;
+    font-family: "Orbitron", sans-serif;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.headerContainer ul {
+    display: flex;
+    margin-right: 10%;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.headerContainer ul li {
+    font-size: .9rem;
+    list-style: none;
+    color: #aaa;
+    cursor: pointer;
+    font-weight: 300;
+    transition: .2s;
+    border-bottom: 1px solid transparent;
+}
+
+.headerContainer ul li:hover {
+    color: white;
+}
+
+.headerContainer ul li:focus {
+    color: red;
+}
+
+#header-nav {
+    animation: blur linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+}
+
+@keyframes blur {
+    to {
+        background-color: rgb(0 0 0 / 65%);
+        backdrop-filter: blur(10px);
+    }
+}
+
+.headerContainer .border {
+    color: white;
+}

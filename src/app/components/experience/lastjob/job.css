@@ -1,0 +1,36 @@
+.jobContainer {
+    margin-top: 0%;
+}
+
+.jobContainer span {
+    color: #09f;
+    font-size: 2rem;
+    padding-right: 5px;
+    margin-bottom: 5%;
+}
+
+.jobContainer h2 {
+    font-size: 1rem;
+}
+
+.experienceContainer .detailsJob {
+    margin-left: 5%;
+    margin-top: -2%;
+    color: #ccc;
+}
+
+.experienceContainer .detailsJob p {
+    margin-bottom: 2%;
+    margin-top: 2%;
+} 
+
+.jobContainer strong {
+    color: rgb(0, 87, 145);
+    font-style: italic;
+}
+
+.jobContainer small {
+    font-style: italic;
+    color: #eee;
+}
+

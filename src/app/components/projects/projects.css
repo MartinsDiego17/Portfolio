@@ -1,0 +1,13 @@
+.projectsContainer {
+    margin-top: 15%;
+    color: #eee;
+    background-color: #051725;
+    padding: 5% 10%;
+}
+
+.projectsContainer h1 {
+    font-size: 3rem;
+    font-style: italic;
+    margin-bottom: 5%;
+    text-align: center;
+}
