@@ -11,3 +11,11 @@
     margin-bottom: 5%;
     text-align: center;
 }
+
+.fatherProjects .light {
+    background-color: white;
+}
+
+.fatherProjects .light h1 {
+    color: #222;
+}

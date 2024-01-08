@@ -1,38 +1,45 @@
+'use client';
 import Link from 'next/link';
 import './contact.css';
+import { useStoreTheme } from '@/app/zustand';
+
 
 const Contact = () => {
+
+  const { theme } = useStoreTheme();
+
   return (
+    <div className='fatherContact' >
+      <div className={'contactChildren ' + theme}>
 
-    <div className='contactChildren' >
+        <section>
 
-      <section>
+          <article className='questions' >
+            <h2>VAMOS A <br />TRABAJAR.</h2>
+            <h4>Convirtiendo ideas en éxitos con soluciones efectivas.</h4>
+            <p className='firstP' ><i className="fa-regular fa-envelope"></i> martinsdiego0513@outlook.es</p>
+            <p><i className="fa-solid fa-location-dot"></i> Buenos Aires, Argentina</p>
+            <h5>
+              <Link href='https://www.linkedin.com/in/diego-martins-563954278/' target='_BLANK' ><i className="fa-brands fa-linkedin"></i>
+              </Link>
+              <Link href='https://github.com/MartinsDiego17' target='_BLANK'><i className="fa-brands fa-github"></i>
+              </Link>
+            </h5>
+            <p></p>
+          </article>
 
-        <article className='questions' >
-          <h2>VAMOS A <br />TRABAJAR.</h2>
-          <h4>Convirtiendo ideas en éxitos con soluciones efectivas.</h4>
-          <p className='firstP' ><i className="fa-regular fa-envelope"></i> martinsdiego0513@outlook.es</p>
-          <p><i className="fa-solid fa-location-dot"></i> Buenos Aires, Argentina</p>
-          <h5>
-            <Link href='https://www.linkedin.com/in/diego-martins-563954278/' target='_BLANK' ><i className="fa-brands fa-linkedin"></i>
-            </Link>
-            <Link href='https://github.com/MartinsDiego17' target='_BLANK'><i className="fa-brands fa-github"></i>
-            </Link>
-          </h5>
-          <p></p>
-        </article>
+          <article className='form' >
+            <form>
+              <input type="text" placeholder='Nombre' />
+              <input type="email" placeholder='Email' />
+              <input type="text" placeholder='Mensaje' />
+              <button>Enviar</button>
+            </form>
+          </article>
 
-        <article className='form' >
-          <form>
-            <input type="text" placeholder='Nombre' />
-            <input type="email" placeholder='Email' />
-            <input type="text" placeholder='Mensaje' />
-            <button>Enviar</button>
-          </form>
-        </article>
+        </section>
 
-      </section>
-
+      </div>
     </div>
 
   )

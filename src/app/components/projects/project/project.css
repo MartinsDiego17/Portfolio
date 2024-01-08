@@ -40,7 +40,6 @@
     border-radius: 5px;
     font-size: 1rem;
     padding: 15px;
-    font-weight: 100;
     margin-left: -90%;
     background-color: rgb(0, 29, 48);
 }
@@ -101,4 +100,22 @@
 
 .projectContainer p {
     margin-bottom: 10%;
+}
+
+.fatherProjects .light h2{
+    color: #333;
+}
+
+.fatherProjects .light p {
+    background-color: #ddd;
+    color: black;
+}
+
+.fatherProjects .light span {
+    background-color: #ddd  ;
+    color: rgb(0, 153, 255);
+}
+
+.fatherProjects .light .projectContainer{
+    background: linear-gradient(transparent, transparent, transparent,rgb(0, 115, 192));
 }

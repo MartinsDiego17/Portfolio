@@ -1,15 +1,17 @@
 'use client';
-
 import { useState, useEffect } from 'react';
 import './presentation.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import Link from 'next/link';
 import photoPerfil from './photoPerfil.jpg';
 import Image from 'next/image';
+import { useStoreTheme } from '@/app/zustand';
 
 const Presentation = () => {
 
     const [text, setText] = useState('');
+
+    const { theme } = useStoreTheme();
 
     useEffect(() => {
         const textH2 = 'FUULL STACK DEVELOPER';
@@ -29,16 +31,19 @@ const Presentation = () => {
 
     return (
         <div className='patherPresentation' >
-            <section className='presentationContainer' >
+            <section className={'presentationContainer '+theme} >
 
                 <article className='namePresentation' >
                     <h1>Hola, mi nombre es<br />Diego Martins</h1>
                     <h2>{text}</h2>
                     <p>"Apasionado de UX/UI, me dedico a crear soluciones innovadoras y diseñar experiencias de usuario cautivadoras. Comprometido con la excelencia, busco constantemente formas de incorporar creatividad e innovación en cada proyecto."</p>
                     <div className='detailsPresentation' >
+
                         <button>Descargar CV <i className="fa-solid fa-download"></i> </button>
-                        <Link href='https://www.linkedin.com/in/diego-martins-563954278/' target='_BLANK' ><i className="fa-brands fa-linkedin"></i></Link>
-                        <Link href='https://github.com/MartinsDiego17' target='_BLANK'><i className="fa-brands fa-github"></i></Link>
+
+                        <Link href='https://www.linkedin.com/in/diego-martins-563954278/' target='_BLANK' ><i className="fa-brands fa-linkedin links "></i></Link>
+
+                        <Link href='https://github.com/MartinsDiego17' target='_BLANK'><i className="fa-brands fa-github links"></i></Link>
                     </div>
                 </article>
 

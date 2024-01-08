@@ -46,7 +46,7 @@
     color: red;
 }
 
-#header-nav {
+#header-nav-dark {
     animation: blur linear both;
     animation-timeline: scroll();
     animation-range: 0 500px;
@@ -59,6 +59,42 @@
     }
 }
 
+#header-nav-light {
+    background-color: white;
+    animation: blurLight linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+}
+
+@keyframes blurLight {
+    to {
+        box-shadow: 0px 0px 10px #999;
+    }
+}
+
+
 .headerContainer .border {
     color: white;
+}
+
+.headerContainer .light {
+    transition: .2s;
+    color: black;
+}
+
+.headerContainer .light:first-child:hover {
+    color: black;
+}
+
+
+.headerContainer .light:hover {
+    color: rgb(2, 110, 182);
+}
+
+.bodyLight {
+    background: #f5f5f5 !important;
+}
+
+.headerContainer .borderLight {
+    color: rgb(2, 110, 182);
 }

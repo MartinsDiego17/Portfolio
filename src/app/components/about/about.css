@@ -47,3 +47,31 @@
 .stackTechs img:hover {
     transform: scale(1.1);
 }
+
+.patherAbout .light {
+    background-color: white;
+}
+
+.patherAbout .light h1 {
+    color: #09f;
+}
+
+.patherAbout .light p {
+    color: #888;
+}
+
+.patherAbout .light h3 {
+    color: rgb(0, 68, 114);
+}
+
+.patherAbout .light h2 {
+    color: #222;
+}
+
+.patherAbout .light strong {
+    color: #09f;
+}
+
+.patherAbout .light small {
+    color: #222;
+}

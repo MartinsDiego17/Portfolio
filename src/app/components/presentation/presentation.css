@@ -37,7 +37,7 @@
 .presentationContainer button {
     padding: 17px 30px;
     border: none;
-    border-radius: 20px;
+    border-radius: 40px;
     background-color: #09f;
     color: white;
     cursor: pointer;
@@ -129,4 +129,21 @@
         /* Comentario: Séptimo conjunto aleatorio */
         border-radius: 65% 35% 50% 50% / 40% 60% 50% 50%;
     }
+}
+
+.patherPresentation .light h1 {
+    color: #222;
+}
+
+.patherPresentation .light p {
+    color: black;
+}
+
+.patherPresentation .light a .links {
+    color: #666;
+    transition: .2s;
+}
+
+.patherPresentation .light a .links:hover {
+    color: #444;
 }

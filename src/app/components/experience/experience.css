@@ -16,3 +16,23 @@
     color: #09f;
     padding-left: 5px;
 }
+
+.fatherExperience .light h2 {
+    color: #333;
+}
+
+.fatherExperience .light strong {
+    color:#09f;
+}
+
+.fatherExperience .light p {
+    color: #888;
+}
+
+.fatherExperience .light small {
+    color: rgb(0, 68, 114);
+}
+
+.fatherExperience .light h1 {
+    color: #222;
+}
