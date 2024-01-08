@@ -53,7 +53,7 @@
 }
 
 .patherAbout .light h1 {
-    color: #09f;
+    color: rgb(0, 68, 114);
 }
 
 .patherAbout .light p {
@@ -66,6 +66,8 @@
 
 .patherAbout .light h2 {
     color: #222;
+    font-weight: 500;
+    font-style: italic;
 }
 
 .patherAbout .light strong {
@@ -73,5 +75,6 @@
 }
 
 .patherAbout .light small {
-    color: #222;
+    color: rgb(0, 68, 114);
+    padding-left: 5%;
 }

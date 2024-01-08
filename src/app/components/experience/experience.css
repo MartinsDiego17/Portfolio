@@ -19,6 +19,8 @@
 
 .fatherExperience .light h2 {
     color: #333;
+    font-style: italic;
+    font-weight: 500;
 }
 
 .fatherExperience .light strong {

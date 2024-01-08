@@ -7,7 +7,7 @@
     transition: .2s;
     padding-right: 2%;
     margin-bottom: 10%;
-    background: linear-gradient(transparent, transparent, transparent,rgb(0, 29, 49));
+    background: linear-gradient(transparent, transparent, transparent, rgb(0, 29, 49));
 }
 
 .projectContainer:last-child {
@@ -62,7 +62,7 @@
     text-decoration: none;
 }
 
-.projectContainer .projectDetails button{
+.projectContainer .projectDetails button {
     margin-top: 10%;
     border: none;
     outline: none;
@@ -90,7 +90,7 @@
     border: solid 1px rgb(0, 92, 153);
 }
 
-.projectContainer .projectDetails a .buttonRepository  {
+.projectContainer .projectDetails a .buttonRepository {
     color: white;
 }
 
@@ -102,7 +102,7 @@
     margin-bottom: 10%;
 }
 
-.fatherProjects .light h2{
+.fatherProjects .light h2 {
     color: #333;
 }
 
@@ -112,10 +112,11 @@
 }
 
 .fatherProjects .light span {
-    background-color: #ddd  ;
+    background-color: #eee;
     color: rgb(0, 153, 255);
 }
 
-.fatherProjects .light .projectContainer{
-    background: linear-gradient(transparent, transparent, transparent,rgb(0, 115, 192));
+.fatherProjects .light .projectContainer {
+    background: linear-gradient(transparent, transparent, transparent, rgb(0, 115, 192));
+    background: linear-gradient(transparent, transparent, transparent, #1c313f);
 }
