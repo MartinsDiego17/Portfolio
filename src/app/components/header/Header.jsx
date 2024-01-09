@@ -70,8 +70,6 @@ const Header = () => {
     const proyectos = currentLenguaje === 'es' ? 'Proyectos' : 'Projects';
     const contacto = currentLenguaje === 'es' ? 'Contacto' : 'Contact';
 
-    console.log(acerca)
-
     return (
         <nav id={'header-nav-' + theme} className={'headerContainer ' + theme} >
             <h1 onClick={() => scroll(0, 'home')} className={theme} >MARTINS</h1>

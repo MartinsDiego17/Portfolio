@@ -2,9 +2,119 @@
 import Link from 'next/link';
 import './contact.css';
 import { useStoreLenguaje, useStoreTheme } from '@/app/zustand';
-
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2'
 
 const Contact = () => {
+
+  const form = useRef();
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mensaje, setMensaje] = useState('');
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(name.length < 1) {
+      Swal.fire({
+        icon:"error",
+        title: "Nombre inválido.",
+        showClass: {
+          popup: `
+            animate__animated
+            animate__fadeInUp
+            animate__faster
+          `
+        },
+        hideClass: {
+          popup: `
+            animate__animated
+            animate__fadeOutDown
+            animate__faster
+          `
+        }
+      });
+      return;
+    }
+
+    if(!regexEmail.test(email)) {
+      Swal.fire({
+        icon:"error",
+        title: "Email inválido.",
+        showClass: {
+          popup: `
+            animate__animated
+            animate__fadeInUp
+            animate__faster
+          `
+        },
+        hideClass: {
+          popup: `
+            animate__animated
+            animate__fadeOutDown
+            animate__faster
+          `
+        }
+      });
+      return;
+    }
+
+    if(mensaje.length < 1) {
+      Swal.fire({
+        icon:"error",
+        title: "Mensaje inválido.",
+        showClass: {
+          popup: `
+            animate__animated
+            animate__fadeInUp
+            animate__faster
+          `
+        },
+        hideClass: {
+          popup: `
+            animate__animated
+            animate__fadeOutDown
+            animate__faster
+          `
+        }
+      });
+      return;
+    }
+
+
+    setName('');
+    setEmail('');
+    setMensaje('');
+
+    emailjs.sendForm('service_kwqupbl', 'template_9hrldjg', form.current, 'dAbYhg4Q92G393ame')
+      .then((result) => {
+        Swal.fire({
+          icon: "success",
+          title: "¡Mensaje enviado con éxito!",
+          showClass: {
+            popup: `
+              animate__animated
+              animate__fadeInUp
+              animate__faster
+            `
+          },
+          hideClass: {
+            popup: `
+              animate__animated
+              animate__fadeOutDown
+              animate__faster
+            `
+          }
+        });
+    
+      }, (error) => {
+        console.log(error)
+      });
+  }
 
   const { theme } = useStoreTheme();
   const { currentLenguaje } = useStoreLenguaje();
@@ -39,10 +149,10 @@ const Contact = () => {
           </article>
 
           <article className='form' >
-            <form>
-              <input type="text" placeholder={ph1} />
-              <input type="email" placeholder='Email' />
-              <input type="text" placeholder={ph3} />
+            <form ref={form} onSubmit={sendEmail} >
+              <input value={name} type="text" placeholder={ph1} name='user_name' onChange={(e) => setName(e.target.value)} />
+              <input value={email} type="email" placeholder='Email' name="user_email" onChange={(e) => setEmail(e.target.value)} />
+              <textarea value={mensaje} type="text" placeholder={ph3} name="message" onChange={(e) => setMensaje(e.target.value)} />
               <button>{boton}</button>
             </form>
           </article>

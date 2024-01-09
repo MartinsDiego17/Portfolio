@@ -37,6 +37,15 @@ const Presentation = () => {
         : '"Passionate about UX/UI, I am devoted to creating innovative solutions and designing exceptionally captivating user experiences. Committed to excellence, constantly looking for ways to incorporate creativity and innovation in each project"';
     const descarga = currentLenguaje === "es" ? "Descargar" : "Download";
 
+    function downloadCv() {
+        const link = document.createElement('a');
+        const file = new Blob([''], { type: 'application/pdf' }); 
+        const fileUrl = URL.createObjectURL(file);
+        link.href = fileUrl;
+        link.download = 'CV_DIEGO_MARTINS.pdf'; 
+        link.click();
+        URL.revokeObjectURL(fileUrl);
+      }
 
     return (
         <div className='patherPresentation' >
@@ -47,7 +56,12 @@ const Presentation = () => {
                     <p>{parrafo}</p>
                     <div className='detailsPresentation' >
 
-                        <button>{descarga} CV <i className="fa-solid fa-download"></i> </button>
+                        {/* <a href='http://localhost:3000/CV_DIEGO_MARTINS.pdf' download={'CV_DIEGO_MARTINS.pdf'}  > */}
+                            <button onClick={downloadCv}  >
+                                {descarga} CV
+                                <i className="fa-solid fa-download"></i>
+                            </button>
+                       {/*  </a> */}
 
                         <Link href='https://www.linkedin.com/in/diego-martins-563954278/' target='_BLANK' ><i className="fa-brands fa-linkedin links "></i></Link>
 
