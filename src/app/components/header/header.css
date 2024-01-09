@@ -61,7 +61,7 @@
 }
 
 #header-nav-light {
-    background-color: white;
+    background-color: #ffffff;
     animation: blurLight linear both;
     animation-timeline: scroll();
     animation-range: 0 500px;
@@ -105,8 +105,8 @@
     display: block;
 }
 
-.light  .currentLenguajeDiv span {
-    color: black; 
+.light .currentLenguajeDiv span {
+    color: black;
     font-weight: 300;
 }
 
