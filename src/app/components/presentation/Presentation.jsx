@@ -37,14 +37,20 @@ const Presentation = () => {
         : '"Passionate about UX/UI, I am devoted to creating innovative solutions and designing exceptionally captivating user experiences. Committed to excellence, constantly looking for ways to incorporate creativity and innovation in each project"';
     const descarga = currentLenguaje === "es" ? "Descargar" : "Download";
 
-    function downloadCv() {
-        const link = document.createElement('a');
-        const file = new Blob([''], { type: 'application/pdf' }); 
-        const fileUrl = URL.createObjectURL(file);
-        link.href = fileUrl;
-        link.download = 'CV_DIEGO_MARTINS.pdf'; 
-        link.click();
-        URL.revokeObjectURL(fileUrl);
+    async function downloadCv() {
+        try {
+          const response = await fetch('/CV_DIEGO_MARTINS.pdf'); // Ruta relativa al archivo PDF en la carpeta "public"
+          const fileData = await response.blob();
+      
+          const link = document.createElement('a');
+          const fileUrl = URL.createObjectURL(fileData);
+          link.href = fileUrl;
+          link.download = 'CV_DIEGO_MARTINS.pdf';
+          link.click();
+          URL.revokeObjectURL(fileUrl);
+        } catch (error) {
+          console.error('Error al descargar el archivo PDF:', error);
+        }
       }
 
     return (
