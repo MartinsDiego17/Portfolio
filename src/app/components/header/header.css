@@ -24,9 +24,10 @@
 .headerContainer ul {
     display: flex;
     margin-right: 10%;
-    width: 40%;
+    width: 43%;
     justify-content: space-between;
 }
+
 
 .headerContainer ul li {
     font-size: .9rem;
@@ -97,4 +98,25 @@
 
 .headerContainer .borderLight {
     color: rgb(2, 110, 182);
+}
+
+.currentLenguajeSpan {
+    color: #bbb;
+    display: block;
+}
+
+.light  .currentLenguajeDiv span {
+    color: black; 
+    font-weight: 300;
+}
+
+.currentLenguajeDiv {
+    justify-content: space-between;
+    width: 8.5%;
+    display: flex;
+    align-self: center;
+}
+
+.currentLenguajeDiv img {
+    cursor: pointer;
 }

@@ -107,9 +107,9 @@
 }
 
 .fatherProjects .light p {
-    background-color: #ddd;
-    color: black;
-}
+    background-color: #eee;
+    color: #333;
+}   
 
 .fatherProjects .light span {
     background-color: #eee;

@@ -5,13 +5,14 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import Link from 'next/link';
 import photoPerfil from './photoPerfil.jpg';
 import Image from 'next/image';
-import { useStoreTheme } from '@/app/zustand';
+import { useStoreLenguaje, useStoreTheme } from '@/app/zustand';
 
 const Presentation = () => {
 
     const [text, setText] = useState('');
 
     const { theme } = useStoreTheme();
+    const { currentLenguaje } = useStoreLenguaje();
 
     useEffect(() => {
         const textH2 = 'FUULL STACK DEVELOPER';
@@ -29,17 +30,24 @@ const Presentation = () => {
         return () => clearInterval(intervalId);
     }, []);
 
+    const saludo = currentLenguaje === "es" ? "Hola, mi nombre es" : "Hello, my name is";
+    const parrafo = currentLenguaje === "es"
+        ? '"Apasionado de UX/UI, me dedico a crear soluciones innovadoras y diseñar experiencias de usuario cautivadoras. Comprometido con la excelencia, busco constantemente formas de incorporar creatividad e innovación en cada proyecto."'
+
+        : '"Passionate about UX/UI, I am devoted to creating innovative solutions and designing exceptionally captivating user experiences. Committed to excellence, constantly looking for ways to incorporate creativity and innovation in each project"';
+    const descarga = currentLenguaje === "es" ? "Descargar" : "Download";
+
+
     return (
         <div className='patherPresentation' >
-            <section className={'presentationContainer '+theme} >
-
+            <section className={'presentationContainer ' + theme} >
                 <article className='namePresentation' >
-                    <h1>Hola, mi nombre es<br />Diego Martins</h1>
+                    <h1>{saludo}<br />Diego Martins</h1>
                     <h2>{text}</h2>
-                    <p>"Apasionado de UX/UI, me dedico a crear soluciones innovadoras y diseñar experiencias de usuario cautivadoras. Comprometido con la excelencia, busco constantemente formas de incorporar creatividad e innovación en cada proyecto."</p>
+                    <p>{parrafo}</p>
                     <div className='detailsPresentation' >
 
-                        <button>Descargar CV <i className="fa-solid fa-download"></i> </button>
+                        <button>{descarga} CV <i className="fa-solid fa-download"></i> </button>
 
                         <Link href='https://www.linkedin.com/in/diego-martins-563954278/' target='_BLANK' ><i className="fa-brands fa-linkedin links "></i></Link>
 

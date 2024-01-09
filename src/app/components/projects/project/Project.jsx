@@ -3,10 +3,15 @@ import Image from 'next/image';
 import './project.css';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useStoreLenguaje } from '@/app/zustand';
 
 const Project = ({ title, imagen, description, stack, github, deploy }) => {
 
     const [classSpan, setClassSpan] = useState('last');
+
+    const { currentLenguaje } = useStoreLenguaje();
+
+    const repositorio = currentLenguaje === "es" ? "Repositorio" : "Repository";
 
     return (
         <section className='projectContainer'>
@@ -29,7 +34,7 @@ const Project = ({ title, imagen, description, stack, github, deploy }) => {
                 }<br />
 
                 <Link target='_BLANK' href={github}>
-                    <button className='buttonRepository' > Repositorio <i className="fa-brands fa-github"></i></button>
+                    <button className='buttonRepository' > {repositorio} <i className="fa-brands fa-github"></i></button>
                 </Link>
 
                 {deploy &&

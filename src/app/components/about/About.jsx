@@ -15,23 +15,37 @@ import sequelize from './sequelize.svg';
 import node from './node.svg';
 import git from './git.svg';
 import github from './github.svg';
-import { useStoreTheme } from '@/app/zustand';
+import { useStoreLenguaje, useStoreTheme } from '@/app/zustand';
 
 const About = () => {
 
     const { theme } = useStoreTheme();
+    const { currentLenguaje } = useStoreLenguaje();
+
+    const acerca = currentLenguaje === "es" ? "Acerca de mí" : "About me";
+    const parrafo1 = currentLenguaje === "es"
+        ? "Apasionado del desarrollo web con incesante interés y curiosidad por este hermoso mundo siempre queriendo adquirir nuevos conocimientos y habilidades que me potencien en carrera."
+        : "Passionate about web development with an insatiable interest and curiosity for this beautiful world, always eager to acquire new knowledge and skills that empower me in my career.";
+
+    const parrafo2 = currentLenguaje === "es" ? "En mi camino de aprendizaje, pude adquirir conocimientos sólidos en el campo, aportando en equipos de trabajo creando soluciones creativas y consistentes mayormente orientadas al front-end."
+        : "In my learning journey, I was able to gain solid knowledge in the field, contributing to teamwork by creating creative and consistent solutions, primarily focused on the front-end.";
+
+    const educacion = currentLenguaje === "es" ? "Educación" : "Education";
+    const tecnologias = currentLenguaje === "es" ? "Tecnologías" : "Technologies";
+
+
 
     return (
         <div className='patherAbout' >
             <div className={'aboutContainer ' + theme}>
-                <h1>Acerca de mí</h1>
+                <h1>{acerca}</h1>
 
-                <p>Apasionado del desarrollo web con incesante interés y curiosidad por este hermoso mundo siempre
-                    queriendo adquirir nuevos conocimientos y habilidades que me potencien en carrera.
+                <p>
+                    {parrafo1}
                 </p>
 
                 <p>
-                    En mi camino de aprendizaje, pude adquirir conocimientos sólidos en el campo, aportando en equipos de trabajo creando soluciones creativas y consistentes mayormente orientadas al front-end.
+                    {parrafo2}
                 </p>
 
                 <section>
@@ -45,7 +59,7 @@ const About = () => {
                         <section>
 
                             <article className='education' >
-                                <h3>Educación</h3>
+                                <h3>{educacion}</h3>
                                 <div className='jobContainer' >
                                     <h2><span>.</span>Full stack developer -<strong> Soy Henry</strong></h2>
                                     <div className='detailsJob' >
@@ -55,7 +69,7 @@ const About = () => {
                             </article>
 
                             <article className='technologiesStack' >
-                                <h3>Tecnologías</h3>
+                                <h3>{tecnologias}</h3>
                                 <div>
                                     <h2><Image src={js} alt='Javascript' width={30} height={30} /></h2>
                                     {theme === "dark" ? (

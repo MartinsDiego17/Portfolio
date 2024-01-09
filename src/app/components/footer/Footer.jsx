@@ -1,11 +1,16 @@
 'use client';
 import Link from 'next/link';
 import './footer.css';
-import { useStoreTheme } from '@/app/zustand';
+import { useStoreLenguaje, useStoreTheme } from '@/app/zustand';
 
 const Footer = () => {
 
   const { theme } = useStoreTheme();
+  const { currentLenguaje } = useStoreLenguaje();
+
+  const parrafo = currentLenguaje === "es" 
+  ? "Copyright © Diego Martins. Todos los derechos reservados." 
+  : "Copyright © Diego Martins. All rights reserved.";
 
   return (
     <div className='fatherFooter' >
@@ -16,7 +21,7 @@ const Footer = () => {
           <Link href='https://github.com/MartinsDiego17' target='_BLANK'><i className="fa-brands fa-github"></i>
           </Link>
           <p>
-            Copyright © Diego Martins. Todos los derechos reservados.
+            {parrafo}
           </p>
         </h5>
       </div>

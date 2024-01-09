@@ -1,12 +1,22 @@
 'use client';
 import Link from 'next/link';
 import './contact.css';
-import { useStoreTheme } from '@/app/zustand';
+import { useStoreLenguaje, useStoreTheme } from '@/app/zustand';
 
 
 const Contact = () => {
 
   const { theme } = useStoreTheme();
+  const { currentLenguaje } = useStoreLenguaje();
+
+  const text1 = currentLenguaje === "es" ? "VAMOS A " : "LET'S GO ";
+  const text2 = currentLenguaje === "es" ? "TRABAJAR." : "TO WORK.";
+  const frase = currentLenguaje === "es"
+    ? "Convirtiendo ideas en éxitos con soluciones efectivas."
+    : "Turning ideas into successes with effective solutions.";
+  const ph1 = currentLenguaje === "es" ? "Nombre" : "Name";
+  const ph3 = currentLenguaje === "es" ? "Mensaje" : "Message";
+  const boton = currentLenguaje === "es" ? "Enviar" : "Send";
 
   return (
     <div className='fatherContact' >
@@ -15,8 +25,8 @@ const Contact = () => {
         <section>
 
           <article className='questions' >
-            <h2>VAMOS A <br />TRABAJAR.</h2>
-            <h4>Convirtiendo ideas en éxitos con soluciones efectivas.</h4>
+            <h2>{text1} <br />{text2} </h2>
+            <h4>{frase} </h4>
             <p className='firstP' ><i className="fa-regular fa-envelope"></i> martinsdiego0513@outlook.es</p>
             <p><i className="fa-solid fa-location-dot"></i> Buenos Aires, Argentina</p>
             <h5>
@@ -30,10 +40,10 @@ const Contact = () => {
 
           <article className='form' >
             <form>
-              <input type="text" placeholder='Nombre' />
+              <input type="text" placeholder={ph1} />
               <input type="email" placeholder='Email' />
-              <input type="text" placeholder='Mensaje' />
-              <button>Enviar</button>
+              <input type="text" placeholder={ph3} />
+              <button>{boton}</button>
             </form>
           </article>
 
