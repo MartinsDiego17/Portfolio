@@ -72,7 +72,10 @@ const Header = () => {
 
     return (
         <nav id={'header-nav-' + theme} className={'headerContainer ' + theme} >
+            {/* <h1 onClick={() => scroll(0, 'home')} className={theme} >MARTINS</h1> */}
+
             <h1 onClick={() => scroll(0, 'home')} className={theme} >MARTINS</h1>
+
             <ul className='' >
 
                 <li className={border.home + ' ' + theme + ' ' + borderLight.home} onClick={() => scroll(0, 'home')} >{inicio}</li>
@@ -93,21 +96,24 @@ const Header = () => {
                     </li>
                 )}
 
-
-
-                {currentLenguaje === "es" ? (
-                    <div className='currentLenguajeDiv'>
-                        <span className='currentLenguajeSpan' >ES</span>
-                        <Image onClick={fnChangeCurrentLenguaje} src={es} width={20} height={20} alt={currentLenguaje} />
-                    </div>
-                ) : (
-                    <div className='currentLenguajeDiv' >
-                        <span className='currentLenguajeSpan' >EN</span>
-                        <Image onClick={fnChangeCurrentLenguaje} src={en} width={20} height={20} alt={currentLenguaje} />
-                    </div>
-                )}
+                <li className='currentLenguaje' >
+                    {currentLenguaje === "es" ? (
+                        <div className='currentLenguajeDiv'>
+                            <span className='currentLenguajeSpan' >ES</span>
+                            <Image onClick={fnChangeCurrentLenguaje} src={es} width={20} height={20} alt={currentLenguaje} />
+                        </div>
+                    ) : (
+                        <div className='currentLenguajeDiv' >
+                            <span className='currentLenguajeSpan' >EN</span>
+                            <Image onClick={fnChangeCurrentLenguaje} src={en} width={20} height={20} alt={currentLenguaje} />
+                        </div>
+                    )}
+                </li>
 
             </ul>
+
+            <h3 className='burgerMenu' ><i class="fa-solid fa-bars"></i></h3>
+
         </nav>
     )
 }

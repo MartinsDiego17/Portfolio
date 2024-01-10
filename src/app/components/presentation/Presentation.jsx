@@ -39,19 +39,19 @@ const Presentation = () => {
 
     async function downloadCv() {
         try {
-          const response = await fetch('/CV_DIEGO_MARTINS.pdf'); // Ruta relativa al archivo PDF en la carpeta "public"
-          const fileData = await response.blob();
-      
-          const link = document.createElement('a');
-          const fileUrl = URL.createObjectURL(fileData);
-          link.href = fileUrl;
-          link.download = 'CV_DIEGO_MARTINS.pdf';
-          link.click();
-          URL.revokeObjectURL(fileUrl);
+            const response = await fetch('/CV_DIEGO_MARTINS.pdf'); // Ruta relativa al archivo PDF en la carpeta "public"
+            const fileData = await response.blob();
+
+            const link = document.createElement('a');
+            const fileUrl = URL.createObjectURL(fileData);
+            link.href = fileUrl;
+            link.download = 'CV_DIEGO_MARTINS.pdf';
+            link.click();
+            URL.revokeObjectURL(fileUrl);
         } catch (error) {
-          console.error('Error al descargar el archivo PDF:', error);
+            console.error('Error al descargar el archivo PDF:', error);
         }
-      }
+    }
 
     return (
         <div className='patherPresentation' >
@@ -62,16 +62,14 @@ const Presentation = () => {
                     <p>{parrafo}</p>
                     <div className='detailsPresentation' >
 
-                        {/* <a href='http://localhost:3000/CV_DIEGO_MARTINS.pdf' download={'CV_DIEGO_MARTINS.pdf'}  > */}
-                            <button onClick={downloadCv}  >
-                                {descarga} CV
-                                <i className="fa-solid fa-download"></i>
-                            </button>
-                       {/*  </a> */}
+                        <button onClick={downloadCv}  >
+                            {descarga} CV
+                            <i className="fa-solid fa-download"></i>
+                        </button>
 
                         <Link href='https://www.linkedin.com/in/diego-martins-563954278/' target='_BLANK' ><i className="fa-brands fa-linkedin links "></i></Link>
-
                         <Link href='https://github.com/MartinsDiego17' target='_BLANK'><i className="fa-brands fa-github links"></i></Link>
+                        <Link href={'mailto:martinsdiego0513@outlook.es'}><i class="fa-solid fa-envelope links"></i></Link>
                     </div>
                 </article>
 

@@ -42,10 +42,11 @@
 
 .stackTechs img {
     transition: .2s;
+
 }
 
 .stackTechs img:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
     -webkit-box-reflect: 
 	below -2px 
 	linear-gradient(to bottom, transparent, 

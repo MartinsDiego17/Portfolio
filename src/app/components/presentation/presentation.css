@@ -25,7 +25,7 @@
     margin-bottom: 1%;
 }
 
-.presentationContainer p {
+.presentationContainer .namePresentation p {
     color: #aaa;
     margin-top: 2%;
     font-weight: 200;
@@ -90,7 +90,9 @@
 }
 
 @keyframes changeBorderRadius {
-    0%, 100% {
+
+    0%,
+    100% {
         /* Comentario: Estado inicial y final */
         border-radius: 48% 52% 55% 45% / 31% 48% 52% 69%;
     }
@@ -146,4 +148,140 @@
 
 .patherPresentation .light a .links:hover {
     color: #444;
+}
+
+@media (max-width: 729px) {
+
+    .presentationContainer {
+        margin-top: 35% !important;
+    }
+
+    .presentationContainer .namePresentation h1 {
+        font-size: 2.5rem;
+    }
+
+    .presentationContainer .namePresentation h2 {
+        font-size: 1.2rem;
+        margin-top: 2%;
+    }
+
+    .presentationContainer .namePresentation p {
+        font-size: .9rem;
+        text-align: center;
+        width: 100%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .presentationContainer .detailsPresentation {
+        display: block;
+    }
+
+    .patherPresentation .detailsPresentation button {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+
+    .presentationContainer {
+        display: block;
+    }
+
+    .presentationContainer .namePresentation {
+        width: 100%;
+        text-align: center;
+    }
+
+    .presentationContainer .imagePresentation {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px){
+
+    .presentationContainer {
+        margin-top: 15%;
+    }
+
+    .presentationContainer h1 {
+        font-size: 3.5rem;
+    }
+
+    .presentationContainer h2 {
+        font-size: 1.3rem;
+    }
+
+    .presentationContainer .namePresentation p{
+        width: 100%;
+        font-size: .8rem;
+    }
+
+    .presentationContainer .imagePresentation img{
+        border: solid 5px #09f;
+    }
+
+}
+
+@media (max-width:1439px) {
+    .presentationContainer .imagePresentation img {
+        width: 65%;
+        height: 65%;
+    }
+}
+
+@media (min-width:1600px){
+    .presentationContainer h1 {
+        font-size: 5rem;
+    }
+
+    .presentationContainer h2 {
+        font-size: 1.7rem;
+    }
+
+    .presentationContainer .namePresentation p {
+        font-size: 1rem;
+    }
+
+    .presentationContainer .imagePresentation img {
+        width: 70%;
+        height: 70%;
+    }
+
+    .presentationContainer .detailsPresentation button {
+        padding: 20px 35px;
+    }
+
+    .presentationContainer .detailsPresentation a {
+        font-size: 28px;
+    }
+}
+
+@media (min-width:1750px){
+
+    .presentationContainer h1 {
+        font-size: 6rem;
+    }
+
+    .presentationContainer h2 {
+        font-size: 2rem;
+    }
+
+    .presentationContainer .namePresentation p {
+        font-size: 1.2rem;
+    }
+
+    .presentationContainer .imagePresentation img {
+        width: 65%;
+        height: 65%;
+    }
+
+    .presentationContainer .detailsPresentation button {
+        padding: 23px 40px;
+    }
+
+    .presentationContainer .detailsPresentation a {
+        font-size: 32px;
+    }
+
 }

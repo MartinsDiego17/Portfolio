@@ -69,8 +69,10 @@
         align-items: center;
     }
 
+    .contactChildren h5 a:first-child,
+    .contactChildren h5 a:nth-child(2),
     .contactChildren h5 a:last-child {
-        margin-left: 1%;
+        margin-right: 2%;
     }
 
     .contactChildren .questions .firstP {

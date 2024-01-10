@@ -1,122 +1,207 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
-.headerContainer {
-    background-color: rgb(0 0 0 / 85%);
-    background-color: transparent;
-    display: flex;
-    color: white;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    position: fixed;
-    margin-top: -10%;
-    width: 100vw;
-}
-
-.headerContainer h1 {
-    margin-left: 10%;
-    font-size: 2rem;
-    font-family: "Orbitron", sans-serif;
-    width: fit-content;
-    cursor: pointer;
-}
-
-.headerContainer ul {
-    display: flex;
-    margin-right: 10%;
-    width: 43%;
-    justify-content: space-between;
-}
-
-
-.headerContainer ul li {
-    font-size: .9rem;
-    list-style: none;
-    color: #aaa;
-    cursor: pointer;
-    font-weight: 300;
-    transition: .2s;
-    border-bottom: 1px solid transparent;
-}
-
-.headerContainer ul li:hover {
-    color: white;
-}
-
-.headerContainer ul li:focus {
-    color: red;
-}
-
-#header-nav-dark {
-    animation: blur linear both;
-    animation-timeline: scroll();
-    animation-range: 0 500px;
-}
-
-@keyframes blur {
-    to {
-        background-color: rgb(0 0 0 / 65%);
-        backdrop-filter: blur(10px);
+    .headerContainer {
+        background-color: rgb(0 0 0 / 85%);
+        background-color: transparent;
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        position: fixed;
+        width: 100vw;
+        top: 0;
     }
-}
 
-#header-nav-light {
-    background-color: #ffffff;
-    animation: blurLight linear both;
-    animation-timeline: scroll();
-    animation-range: 0 500px;
-}
-
-@keyframes blurLight {
-    to {
-        box-shadow: 0px 0px 7px #999;
+    .headerContainer h1 {
+        margin-left: 10%;
+        font-size: 2rem;
+        font-family: "Orbitron", sans-serif;
+        width: fit-content;
+        cursor: pointer;
     }
-}
+
+    .headerContainer ul {
+        display: flex;
+        align-items: center ;
+        width: 43%;
+        margin-right: 10%;
+        justify-content: space-between;
+    }
+
+    .headerContainer ul li {
+        font-size: .9rem;
+        list-style: none;
+        color: #aaa;
+        cursor: pointer;
+        font-weight: 300;
+        transition: .2s;
+        border-bottom: 1px solid transparent;
+    }
+
+    .headerContainer ul li:hover {
+        color: white;
+    }
+
+    .headerContainer ul li:focus {
+        color: red;
+    }
+
+    #header-nav-dark {
+        animation: blur linear both;
+        animation-timeline: scroll();
+        animation-range: 0 500px;
+    }
+
+    @keyframes blur {
+        to {
+            background-color: rgb(0 0 0 / 65%);
+            backdrop-filter: blur(10px);
+        }
+    }
+
+    #header-nav-light {
+        background-color: #ffffff;
+        animation: blurLight linear both;
+        animation-timeline: scroll();
+        animation-range: 0 500px;
+    }
+
+    @keyframes blurLight {
+        to {
+            box-shadow: 0px 0px 7px #999;
+        }
+    }
 
 
-.headerContainer .border {
-    color: white;
-}
+    .headerContainer .border {
+        color: white;
+    }
 
-.headerContainer .light {
-    transition: .2s;
-    color: black;
-}
+    .headerContainer .light {
+        transition: .2s;
+        color: black;
+    }
 
-.headerContainer .light:first-child:hover {
-    color: black;
-}
+    .headerContainer .light:first-child:hover {
+        color: black;
+    }
 
 
-.headerContainer .light:hover {
-    color: rgb(2, 110, 182);
-}
+    .headerContainer .light:hover {
+        color: rgb(2, 110, 182);
+    }
 
-.bodyLight {
-    background: #f5f5f5 !important;
-}
+    .bodyLight {
+        background: #f5f5f5 !important;
+    }
 
-.headerContainer .borderLight {
-    color: rgb(2, 110, 182);
-}
+    .headerContainer .borderLight {
+        color: rgb(2, 110, 182);
+    }
 
-.currentLenguajeSpan {
-    color: #bbb;
-    display: block;
-}
+    .currentLenguajeSpan {
+        color: #bbb;
+        display: block;
+    }
 
-.light .currentLenguajeDiv span {
-    color: black;
-    font-weight: 300;
-}
+    .light .currentLenguajeDiv span {
+        color: black;
+        font-weight: 300;
+    }
 
-.currentLenguajeDiv {
-    justify-content: space-between;
-    width: 8.5%;
-    display: flex;
-    align-self: center;
-}
+    .currentLenguajeDiv img {
+        cursor: pointer;
+    }
 
-.currentLenguajeDiv img {
-    cursor: pointer;
-}
+    .headerContainer .burgerMenu {
+        display: none;
+    }
+
+    .headerContainer .currentLenguaje {
+        width: 7.5%;
+    }
+
+    .currentLenguajeDiv {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+
+    .headerContainer h3 {
+        margin-right: 10%;
+    }
+
+    @media (max-width: 729px) {
+
+        .headerContainer ul {
+            display: none;
+        }
+
+        .headerContainer .burgerMenu {
+            display: block;
+        }
+
+        .headerContainer h2 {
+            font-size: 1.3rem;
+        }
+
+        .headerContainer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+
+    
+    @media (min-width: 730px) {
+
+        .headerContainer .burgerMenu {
+            display: none;
+        }
+
+        .headerContainer ul {
+            width: 50%;
+            display: flex;
+        }
+
+        .headerContainer ul li {
+            font-size: .6rem;
+        }
+
+        .headerContainer h2 {
+            font-size: 2rem;
+        }
+
+        .headerContainer .currentLenguajeDiv img {
+            height: 15px;
+        }
+
+    }
+
+    @media (min-width: 1000px) {
+
+        .headerContainer ul {
+            width: 43%;
+        }
+
+        .headerContainer ul li {
+            font-size: .9rem;
+        }
+
+        .headerContainer .currentLenguajeDiv img {
+            height: 25px;
+        }
+
+    }
+
+    @media (min-width: 1441px){
+        .headerContainer ul {
+            width: 43%;
+        }
+
+        .headerContainer ul li {
+            font-size: 1.1rem;
+        }
+
+    }
