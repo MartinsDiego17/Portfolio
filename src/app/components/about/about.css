@@ -83,3 +83,55 @@
     color: rgb(0, 68, 114);
     padding-left: 5%;
 }
+
+@media (max-width: 729px){
+    .aboutContainer h1 {
+        text-align: center;
+    }
+    .aboutContainer p {
+        width: 100%;
+        text-align: center;
+        font-weight: 200;
+    }
+    .aboutContainer .stackTechs section{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .aboutContainer .stackTechs .education {
+        width: 100%;
+        margin-bottom: 15%;
+        margin-top: 15%;
+    }
+
+    .aboutContainer .stackTechs .technologiesStack .techs {
+        padding-bottom: 10%;
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media (max-width: 1000px) {
+        .aboutContainer h1 {
+            font-size: 1.5rem;
+        }
+        .aboutContainer p {
+            font-size: .7rem;
+        }
+        .aboutContainer .stackTechs .education  {
+            background-color: red;
+            font-size: .7rem;
+        }
+        .aboutContainer .stackTechs .education h3,
+        .aboutContainer .stackTechs .technologiesStack h3 {
+            font-size: .7rem;
+        }
+        .aboutContainer .stackTechs .education h2,
+        .aboutContainer .stackTechs .education h2 {
+            font-size: .7rem;
+        }
+}

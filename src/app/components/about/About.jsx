@@ -49,11 +49,6 @@ const About = () => {
                 </p>
 
                 <section>
-
-                    <article className='education' >
-
-                    </article>
-
                     <article className='stackTechs' >
 
                         <section>
@@ -70,13 +65,15 @@ const About = () => {
 
                             <article className='technologiesStack' >
                                 <h3>{tecnologias}</h3>
-                                <div>
+                                <div className='techs' >
+
                                     <h2><Image src={js} alt='Javascript' width={30} height={30} /></h2>
                                     {theme === "dark" ? (
                                         <h2><Image src={nextjs} alt='Next JS' width={30} height={30} /></h2>
                                     ) : (
                                         <h2><Image src={nextjsdark} alt='Next JS' width={30} height={30} /></h2>
                                     )}
+
                                     <h2><Image src={react} alt='React JS' width={30} height={30} /></h2>
                                     <h2><Image src={html} alt='HTML5' width={30} height={30} /></h2>
                                     <h2><Image src={css} alt='CSS3' width={30} height={30} /></h2>
@@ -88,6 +85,7 @@ const About = () => {
                                     <h2><Image src={git} alt='Git' width={30} height={30} /></h2>
                                     <h2><Image src={github} alt='Github' width={30} height={30} /></h2>
                                 </div>
+
                             </article>
 
                         </section>
