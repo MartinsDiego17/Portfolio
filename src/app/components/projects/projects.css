@@ -26,3 +26,15 @@
     }
 
 }
+
+@media (max-width:1000px){
+    .projectsContainer {
+        padding: 5% 5%;
+    }
+}
+
+@media (min-width:1600px){
+    .projectsContainer h1 {
+        font-size: 4rem;
+    }
+}

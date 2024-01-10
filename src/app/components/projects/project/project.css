@@ -126,7 +126,7 @@
 
     .projectContainer {
         display: block;
-        margin-bottom: 30%;
+        margin-bottom: 30% !important;
         height: 100%;
     }
 
@@ -185,6 +185,7 @@
 }
 
 @media (max-width:1000px) {
+
     .projectContainer .projectDetails h2 {
         font-size: 1.6rem;
     }
@@ -202,4 +203,25 @@
         font-size: .6rem;
     }
 
+}
+
+
+@media (min-width:1600px) {
+    .projectsContainer .projectDetails h2 {
+        font-size: 3rem;
+    }
+
+    .projectContainer .projectDetails p {
+        font-size: 1.3rem;
+    }
+
+    .projectContainer .projectDetails span {
+        font-size: 1rem;
+        padding: 7px 20px;
+    }
+
+    .projectContainer .projectDetails button {
+        padding: 13px 25px;
+        font-size: 1.25rem;
+    }
 }

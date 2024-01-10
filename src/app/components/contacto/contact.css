@@ -114,7 +114,8 @@
         margin-top: 0%;
     }
 
-    .contactChildren .form input:focus {
+    .contactChildren .form input:focus,
+    .contactChildren .form textarea:focus {
         border: solid 2px rgb(0, 85, 141);
     }
 
@@ -153,7 +154,8 @@
         background-color: #eee;
     }
 
-    .fatherContact .light input, .fatherContact .light textarea {
+    .fatherContact .light input,
+    .fatherContact .light textarea {
         background-color: #ccc;
         color: black;
     }
@@ -161,4 +163,62 @@
     .fatherContact textarea {
         font-family: sans-serif;
         font-weight: 500;
+    }
+
+    @media (max-width:729px) {
+        .contactChildren section {
+            margin: 0 auto;
+            display: block;
+        }
+
+        .contactChildren .questions {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .contactChildren .questions h2 {
+            font-size: 2rem;
+            width: 80%;
+            text-align: center;
+        }
+
+        .contactChildren .questions h4 {
+            width: 80%;
+            text-align: center;
+        }
+
+        .contactChildren p {
+            width: 80%;
+            text-align: center;
+            font-size: .7rem;
+        }
+
+        .contactChildren .questions h5 {
+            width: 80%;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .contactChildren .form {
+            width: 80%;
+        }
+
+    }
+
+    @media (max-width:1000px) {
+        .contactChildren .questions h2 {
+            font-size: 2rem;
+        }
+
+        .contactChildren .questions h4 {
+            font-size: .8rem;
+        }
+
+        .contactChildren .questions p {
+            font-size: .7rem;
+        }
+
+        .contactChildren .questions h5 {
+            font-size: 1rem;
+        }
     }
