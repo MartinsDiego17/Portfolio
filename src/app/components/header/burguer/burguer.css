@@ -9,6 +9,7 @@
     margin-left: -50vw;
     color: black;
     border-bottom-left-radius: 10px;
+    box-shadow: 0px 0px 20px #777;
 }
 
 .burguerContainer ul {

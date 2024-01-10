@@ -42,8 +42,6 @@ const About = () => {
         : "Throughout my life, I have engaged in disciplines and activities that strengthened many aspects of my personality, such as discipline, perseverance, and dedication to achieve any goal.";
 
 
-
-
     const educacion = currentLenguaje === "es" ? "Educación" : "Education";
     const tecnologias = currentLenguaje === "es" ? "Tecnologías" : "Technologies";
 
