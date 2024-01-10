@@ -44,3 +44,19 @@
 @media (max-width:1000px) {
     
 }
+
+@media (min-width:1600px){
+    .jobContainer h2 {
+        font-size: 1.5rem;
+        font-weight: 600 !important;
+    }
+
+    .jobContainer p {
+        font-size: 1.3rem;
+    }
+
+    .jobContainer small {
+        font-size: 1.3rem;
+    }
+
+}

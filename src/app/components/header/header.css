@@ -134,8 +134,16 @@
 
     @media (max-width: 729px) {
 
-        .headerContainer ul {
+        .headerContainer .ulNormal {
             display: none;
+        }
+
+        .headerContainer .burguerContainer {
+            display: block !important;
+        }
+
+        nav h3 .light {
+            color: black;
         }
 
         .headerContainer .burgerMenu {

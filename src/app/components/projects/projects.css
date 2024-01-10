@@ -22,7 +22,7 @@
 
 @media (max-width:729px) {
     .projectsContainer h1 {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
 
 }
@@ -30,6 +30,9 @@
 @media (max-width:1000px){
     .projectsContainer {
         padding: 5% 5%;
+    }
+    .projectsContainer h1 {
+        font-size: 2.5rem;
     }
 }
 

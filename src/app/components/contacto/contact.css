@@ -195,8 +195,11 @@
 
         .contactChildren .questions h5 {
             width: 80%;
-            font-size: 1.3rem;
             text-align: center;
+        }
+
+        .contactChildren .questions h5 a {
+            font-size: 2rem;
         }
 
         .contactChildren .form {
@@ -219,6 +222,50 @@
         }
 
         .contactChildren .questions h5 {
-            font-size: 1rem;
+            font-size: 1.3rem;
         }
+
+        .contactChildren .form input {
+            padding: 5px 8px;
+        }
+
+        .contactChildren .form textarea {
+            padding: 8px;
+        }
+
+    }
+
+    @media (min-width:1600px) {
+        .contactChildren .questions h2 {
+            font-size: 74.66px;
+        }
+
+        .contactChildren .questions h4 {
+            font-size: 1.2rem;
+        }
+
+        .contactChildren .questions p {
+            font-size: 1.1rem;
+        }
+
+        .contactChildren .questions h5 {
+            font-size: 2rem;
+        }
+
+        .contactChildren .form input {
+            padding: 13px;
+        }
+
+        .contactChildren .form {
+            width: 25%;
+        }
+
+        .contactChildren .form textarea {
+            padding: 13px;
+        }
+
+        .contactChildren .form button {
+            padding: 15px;
+        }
+
     }

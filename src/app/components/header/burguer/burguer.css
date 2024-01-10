@@ -1,0 +1,38 @@
+.burguerContainer {
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    text-align: right;
+    padding: 20px;
+    background-color: white;
+    top: 0;
+    margin-left: -50vw;
+    color: black;
+    border-bottom-left-radius: 10px;
+}
+
+.burguerContainer ul {
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0;
+    display: block;
+}
+
+.burguerContainer ul li {
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    text-align: right;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    transition: .2s;
+}
+
+.burguerContainer ul li:hover {
+    color: black;
+}
+
+.burguerContainer .currentLenguajeDiv {
+    margin-top: 10px;
+}

@@ -17,12 +17,16 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const msj1 = currentLenguaje === "es" ? "Nombre inválido." : "Invalid name.";
+    const msj2 = currentLenguaje === "es" ? "Email inválido." : "Invalid email.";
+    const msj3 = currentLenguaje === "es" ? "Mensaje inválido." : "Invalid message.";
+
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if(name.length < 1) {
       Swal.fire({
         icon:"error",
-        title: "Nombre inválido.",
+        title: msj1,
         showClass: {
           popup: `
             animate__animated
@@ -44,7 +48,7 @@ const Contact = () => {
     if(!regexEmail.test(email)) {
       Swal.fire({
         icon:"error",
-        title: "Email inválido.",
+        title: msj2,
         showClass: {
           popup: `
             animate__animated
@@ -66,7 +70,7 @@ const Contact = () => {
     if(mensaje.length < 1) {
       Swal.fire({
         icon:"error",
-        title: "Mensaje inválido.",
+        title: msj3,
         showClass: {
           popup: `
             animate__animated
@@ -127,6 +131,7 @@ const Contact = () => {
   const ph1 = currentLenguaje === "es" ? "Nombre" : "Name";
   const ph3 = currentLenguaje === "es" ? "Mensaje" : "Message";
   const boton = currentLenguaje === "es" ? "Enviar" : "Send";
+
 
   return (
     <div className='fatherContact' >

@@ -10,7 +10,7 @@ const Projects = () => {
     const { theme } = useStoreTheme();
     const { currentLenguaje } = useStoreLenguaje();
 
-    const proyectos = currentLenguaje === "es" ? "Proyectos" : "Projects";
+    const proyectos = currentLenguaje === "es" ? "PROYECTOS" : "PROJECTS";
 
     const descripcion = currentLenguaje === "es"
         ? "Vorttex Gaming es un E-Commerce que desarrollamos con mi equipo de estudio, en el cual tuve algunos retos que al superarlos me hicieron mejorar como desarrollador"

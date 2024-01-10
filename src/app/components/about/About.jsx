@@ -22,7 +22,7 @@ const About = () => {
     const { theme } = useStoreTheme();
     const { currentLenguaje } = useStoreLenguaje();
 
-    const acerca = currentLenguaje === "es" ? "Acerca de mí" : "About me";
+    const acerca = currentLenguaje === "es" ? "ACERCA DE MÍ" : "ABOUT ME";
     const parrafo1 = currentLenguaje === "es"
         ? "Apasionado del desarrollo web con incesante interés y curiosidad por este hermoso mundo siempre queriendo adquirir nuevos conocimientos y habilidades que me potencien en carrera."
         : "Passionate about web development with an insatiable interest and curiosity for this beautiful world, always eager to acquire new knowledge and skills that empower me in my career.";

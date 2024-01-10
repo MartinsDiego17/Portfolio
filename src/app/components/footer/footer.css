@@ -47,3 +47,9 @@
 .fatherFooter .light a:hover {
     color: #09f;
 }
+
+@media (max-width:729px){
+    .footer p {
+        font-size: .7rem;
+    }    
+}
