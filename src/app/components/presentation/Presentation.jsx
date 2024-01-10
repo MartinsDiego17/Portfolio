@@ -69,7 +69,7 @@ const Presentation = () => {
 
                         <Link href='https://www.linkedin.com/in/diego-martins-563954278/' target='_BLANK' ><i className="fa-brands fa-linkedin links "></i></Link>
                         <Link href='https://github.com/MartinsDiego17' target='_BLANK'><i className="fa-brands fa-github links"></i></Link>
-                        <Link href={'mailto:martinsdiego0513@outlook.es'}><i class="fa-solid fa-envelope links"></i></Link>
+                        <Link href={'mailto:martinsdiego0513@outlook.es'}><i className="fa-solid fa-envelope links"></i></Link>
                     </div>
                 </article>
 

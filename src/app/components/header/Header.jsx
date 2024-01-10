@@ -153,7 +153,7 @@ const Header = () => {
             </ul>
 
             <h3 className={'burgerMenu ' + theme}>
-                <i class="fa-solid fa-bars" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <i className="fa-solid fa-bars" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     <Burguer
                         isOpen={isMenuOpen}
                         closeMenu={setIsMenuOpen}

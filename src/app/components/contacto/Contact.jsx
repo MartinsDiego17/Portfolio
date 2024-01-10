@@ -149,7 +149,7 @@ const Contact = () => {
               </Link>
               <Link href='https://github.com/MartinsDiego17' target='_BLANK'><i className="fa-brands fa-github"></i>
               </Link>
-              <Link href={'mailto:martinsdiego0513@outlook.es'}><i class="fa-solid fa-envelope"></i></Link>
+              <Link href={'mailto:martinsdiego0513@outlook.es'}><i className  ="fa-solid fa-envelope"></i></Link>
             </h5>
             <p></p>
           </article>
