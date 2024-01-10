@@ -9,7 +9,8 @@
 .experienceContainer h1 {
     margin-bottom: 0;
     text-align: center;
-    font-style: italic;
+    color: white;
+    font-size: 2.3rem;
 }
 
 .experienceContainer h1 i {
