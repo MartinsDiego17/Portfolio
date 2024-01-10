@@ -195,6 +195,18 @@
 
     }
 
+    @media (max-width:1000px){
+        .headerContainer  {
+            height: 45px;
+            align-items: center;    
+        }
+
+        .headerContainer h1 {
+            font-size: 1.5rem;
+        }
+
+    }
+
     @media (min-width: 1441px){
         .headerContainer ul {
             width: 43%;

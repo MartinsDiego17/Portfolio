@@ -35,3 +35,12 @@
     color: #eee;
 }
 
+@media (max-width:729px) {
+    .jobContainer p {
+        font-size: .85rem;
+    }
+}
+
+@media (max-width:1000px) {
+    
+}

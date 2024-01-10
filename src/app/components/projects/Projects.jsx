@@ -16,9 +16,9 @@ const Projects = () => {
         ? "Vorttex Gaming es un E-Commerce que desarrollamos con mi equipo de estudio, en el cual tuve algunos retos que al superarlos me hicieron mejorar como desarrollador"
         : "Vorttex Gaming is an E-Commerce site developed with my study team. Overcoming challenges during its creation significantly improved my skills as a developer.";
 
-    const descripcion2 = currentLenguaje === "es" 
-    ? "Pokedex elaborada con la Poke-Api, con formularios de registro, inicio de sesión y creación de pokemones. También cuenta con ordenamientos, filtros y búsqueda de pokemones." 
-    : "A Pokédex developed with the Poke-Api, offering user-friendly features like registration, login forms, and Pokémon creation. Enhanced with sorting, filtering, and search options, it provides a comprehensive and engaging experience.";
+    const descripcion2 = currentLenguaje === "es"
+        ? "Pokedex elaborada con la Poke-Api, con formularios de registro, inicio de sesión y creación de pokemones. También cuenta con ordenamientos, filtros y búsqueda de pokemones."
+        : "A Pokédex developed with the Poke-Api, offering user-friendly features like registration, login forms, and Pokémon creation. Enhanced with sorting, filtering, and search options, it provides a comprehensive and engaging experience.";
 
     return (
         <div className='fatherProjects' >

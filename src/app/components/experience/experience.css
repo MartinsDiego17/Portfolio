@@ -24,7 +24,7 @@
 }
 
 .fatherExperience .light strong {
-    color:#09f;
+    color: #09f;
 }
 
 .fatherExperience .light p {
@@ -37,4 +37,20 @@
 
 .fatherExperience .light h1 {
     color: #222;
+}
+
+@media (max-width:729px) {
+    .experienceContainer {
+        width: 80%;
+        text-align: center;
+        padding: 5% 10%;
+    }
+}
+
+@media (max-width:1000px) {
+    .experienceContainer {
+        width: 80%;
+        text-align: center;
+        padding: 5% 10%;
+    }
 }

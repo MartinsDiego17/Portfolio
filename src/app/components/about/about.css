@@ -35,7 +35,7 @@
     margin-bottom: 0;
 }
 
-.stackTechs .technologiesStack div{
+.stackTechs .technologiesStack div {
     gap: 5%;
     display: flex;
 }
@@ -47,10 +47,9 @@
 
 .stackTechs img:hover {
     transform: scale(1.2);
-    -webkit-box-reflect: 
-	below -2px 
-	linear-gradient(to bottom, transparent, 
-	rgba(0, 0, 0, 0.3));
+    -webkit-box-reflect:
+        below -2px linear-gradient(to bottom, transparent,
+            rgba(0, 0, 0, 0.3));
 }
 
 .patherAbout .light {
@@ -84,16 +83,18 @@
     padding-left: 5%;
 }
 
-@media (max-width: 729px){
+@media (max-width: 729px) {
     .aboutContainer h1 {
         text-align: center;
     }
+
     .aboutContainer p {
         width: 100%;
         text-align: center;
         font-weight: 200;
     }
-    .aboutContainer .stackTechs section{
+
+    .aboutContainer .stackTechs section {
         display: block;
         text-align: center;
         width: 100%;
@@ -116,22 +117,56 @@
 }
 
 @media (max-width: 1000px) {
-        .aboutContainer h1 {
-            font-size: 1.5rem;
-        }
-        .aboutContainer p {
-            font-size: .7rem;
-        }
-        .aboutContainer .stackTechs .education  {
-            background-color: red;
-            font-size: .7rem;
-        }
-        .aboutContainer .stackTechs .education h3,
-        .aboutContainer .stackTechs .technologiesStack h3 {
-            font-size: .7rem;
-        }
-        .aboutContainer .stackTechs .education h2,
-        .aboutContainer .stackTechs .education h2 {
-            font-size: .7rem;
-        }
+    .aboutContainer h1 {
+        font-size: 1.5rem;
+    }
+
+    .aboutContainer p {
+        font-size: .7rem;
+    }
+
+    .aboutContainer .stackTechs .education {
+        min-width: 45%;
+        margin-right: 10%;
+        font-size: .7rem;
+    }
+
+    .aboutContainer .stackTechs .education h3,
+    .aboutContainer .stackTechs .technologiesStack h3 {
+        font-size: .7rem;
+    }
+
+    .aboutContainer .stackTechs .education h2 {
+        font-size: .7rem;
+    }
+
+    .aboutContainer .stackTechs .technologiesStack img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (min-width:1600px) {
+    .aboutContainer h1 {
+        font-size: 3.3rem;
+    }
+
+    .aboutContainer p {
+        font-size: 1.2rem;
+    }
+
+    .aboutContainer .stackTechs .education h3,
+    .aboutContainer .stackTechs .technologiesStack h3 {
+        font-size: 1.3rem;
+    }
+
+    .aboutContainer .stackTechs .education h2 {
+        font-size: 1rem;
+    }
+
+    .aboutContainer .stackTechs .technologiesStack img {
+        width: 35px;
+        height: 35px;
+    }
+
 }

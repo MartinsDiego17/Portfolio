@@ -110,7 +110,7 @@
 .fatherProjects .light p {
     background-color: #eee;
     color: #333;
-}   
+}
 
 .fatherProjects .light span {
     background-color: #eee;
@@ -120,4 +120,86 @@
 .fatherProjects .light .projectContainer {
     background: linear-gradient(transparent, transparent, transparent, rgb(0, 115, 192));
     background: linear-gradient(transparent, transparent, transparent, #1c313f);
+}
+
+@media (max-width:729px) {
+
+    .projectContainer {
+        display: block;
+        margin-bottom: 30%;
+        height: 100%;
+    }
+
+    .projectContainer .projectDetails h2 {
+        font-size: 1.6rem;
+    }
+
+
+    .projectContainer .projectDetails p {
+        width: 80%;
+        margin: 0;
+        text-align: center;
+        font-size: .8rem;
+        margin: 0 auto;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+
+    .projectContainer .projectDetails a {
+        margin: 0;
+    }
+
+    .projectContainer .projectImage {
+        height: 40%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .projectContainer .projectDetails button {
+        margin: 0 !important;
+        margin-top: 10% !important;
+        margin-bottom: 10% !important;
+    }
+
+    .projectContainer .projectDetails button:first-child {
+        margin-right: 5% !important;
+    }
+
+    .projectContainer .projectDetails button:last-child {
+        margin-left: 5% !important;
+    }
+
+
+    .projectContainer .projectImage img {
+        border-radius: 0;
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .projectContainer .projectDetails {
+        text-align: center;
+        width: 100%;
+    }
+
+}
+
+@media (max-width:1000px) {
+    .projectContainer .projectDetails h2 {
+        font-size: 1.6rem;
+    }
+
+    .projectContainer .projectDetails p {
+        font-size: .8rem;
+    }
+
+    .projectContainer .projectDetails span {
+        font-size: .65rem;
+    }
+
+    .projectContainer .projectDetails button {
+        padding: 8px 17px;
+        font-size: .6rem;
+    }
+
 }

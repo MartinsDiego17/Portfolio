@@ -19,3 +19,10 @@
 .fatherProjects .light h1 {
     color: #222;
 }
+
+@media (max-width:729px) {
+    .projectsContainer h1 {
+        font-size: 2rem;
+    }
+
+}
