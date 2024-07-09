@@ -1,14 +1,34 @@
 body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at top center, rgb(0, 52, 87), rgb(0, 50, 83) 0%, rgb(0, 21, 36) 20%, rgb(0, 14, 24) 25%, black 100%);
+  background-attachment: fixed;
   overflow-x: hidden;
+  background-color: #171717;
+  background: linear-gradient(to right, #04102e, #04102e, #04102e, #04102e, #001d3f);
 }
 
-html, body {
+html,
+body {
   width: 100vw;
 }
 
 html {
   overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #222;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #ccc;
 }

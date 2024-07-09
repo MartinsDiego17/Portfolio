@@ -6,19 +6,21 @@ import Projects from "./components/projects/Projects";
 import Contact from "./components/contacto/Contact";
 import Footer from "./components/footer/Footer";
 import Burguer from "./components/header/burguer/Burguer";
+import Stack from "./components/stack/Stack";
 
 const Home = () => {
   return (
-    <>
+      <>
         <Presentation />
-        <About />
         <Experience />
+        <About />
+        <Stack />
         <Projects />
         <Contact />
         <Footer />
-    </>
-  )
-}
+      </>
+    )
+  }
 
 
 export default Home;

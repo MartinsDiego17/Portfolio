@@ -1,73 +1,27 @@
 .experienceContainer {
-    width: 40%;
+    width: 40vw;
     margin: 0 auto;
-    margin-top: 0;
-    color: #eee;
-    margin-bottom: 5%;
-}
-
-.experienceContainer h1 {
-    margin-bottom: 0;
-    text-align: center;
     color: white;
-    font-size: 2.3rem;
+    margin-bottom: 10%  ;
 }
 
-.experienceContainer h1 i {
-    color: #09f;
-    padding-left: 5px;
+.experienceContainer ol {
+    padding-left: 0;
+    list-style: none;
 }
 
-.fatherExperience .light h2 {
-    color: #333;
-    font-style: italic;
-    font-weight: 500;
+.experienceContainer h2 {
+    margin-bottom: 5%;
+    margin-left: -0.750rem;
+    font-size: 1.5rem;  
 }
 
-.fatherExperience .light strong {
-    color: #09f;
+.experienceContainer h2 i {
+    opacity: .7;
+    margin-right: 2%;
+    padding-left: 0;
 }
 
-.fatherExperience .light p {
-    color: #888;
-}
-
-.fatherExperience .light small {
-    color: rgb(0, 68, 114);
-}
-
-.fatherExperience .light h1 {
-    color: #222;
-}
-
-@media (max-width:729px) {
-    .experienceContainer {
-        width: 80%;
-        text-align: center;
-        padding: 5% 10%;
-    }
-
-    .experienceContainer h1 {
-        font-size: 2.3rem !important;
-    }
-
-}
-
-@media (max-width:1000px) {
-    .experienceContainer {
-        width: 80%;
-        text-align: center;
-        padding: 5% 10%;
-    }
-
-    .experienceContainer h1 {
-        font-size: 1.5rem;
-    }
-
-}
-
-@media (min-width:1600px){
-    .experienceContainer h1 {
-        font-size: 3.3rem;
-    }
+.experienceContainer.light h2 {
+    color: #333; 
 }

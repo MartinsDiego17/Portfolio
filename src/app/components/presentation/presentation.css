@@ -2,11 +2,36 @@
     height: 85vh;
 }
 
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes imgAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .presentationContainer {
     margin-top: 10%;
     padding: 0 10%;
     display: flex;
     align-items: center;
+    line-height: 1.2;
 }
 
 .presentationContainer h1 {
@@ -19,34 +44,39 @@
 
 .presentationContainer h2 {
     color: rgb(0, 153, 255);
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 1%;
     height: 3vh;
-    margin-bottom: 1%;
+    font-weight: 700;
+    margin-bottom: 3%;
 }
 
 .presentationContainer .namePresentation p {
-    color: #aaa;
+    color: #888;
     margin-top: 2%;
-    font-weight: 200;
-    width: 75%;
+    font-weight: 500;
+    width: 80%;
     font-size: 1rem;
     margin-bottom: 1.5%;
 }
 
 .presentationContainer button {
-    padding: 17px 30px;
+    padding: 10px 25px;
     border: none;
-    border-radius: 40px;
+    width: 23%;
+    border-radius: 5px;
     background-color: #09f;
     color: white;
     cursor: pointer;
+    border: solid 2px transparent;
+    font-weight: 500;
+    font-size: 12px;
     outline: none;
     transition: .2s;
 }
 
 .presentationContainer button:hover {
-    background-color: rgb(56, 175, 255);
+    color: #eee;
 }
 
 .presentationContainer .namePresentation {
@@ -60,13 +90,14 @@
 
 .presentationContainer .detailsPresentation {
     display: flex;
+    margin-top: 3%;
     align-items: center;
 }
 
 .presentationContainer a {
     color: #ccc;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-left: 3%;
     transition: .2s;
 }
@@ -83,10 +114,8 @@
     width: 80%;
     height: 80%;
     border-radius: 48% 52% 55% 45% / 31% 48% 52% 69%;
-    border: solid 10px #09f;
     transition: .3s;
     animation: changeBorderRadius 17s infinite;
-    /* 3 segundos para cada estado, se repite infinitamente */
 }
 
 @keyframes changeBorderRadius {
@@ -142,12 +171,12 @@
 }
 
 .patherPresentation .light a .links {
-    color: #666;
+    color: #0874c5;
     transition: .2s;
 }
 
 .patherPresentation .light a .links:hover {
-    color: #444;
+    color: #0e3b5d;
 }
 
 @media (max-width: 729px) {
@@ -198,7 +227,7 @@
     }
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1000px) {
 
     .presentationContainer {
         margin-top: 15%;
@@ -212,12 +241,12 @@
         font-size: 1.3rem;
     }
 
-    .presentationContainer .namePresentation p{
+    .presentationContainer .namePresentation p {
         width: 100%;
         font-size: .8rem;
     }
 
-    .presentationContainer .imagePresentation img{
+    .presentationContainer .imagePresentation img {
         border: solid 5px #09f;
     }
 
@@ -230,7 +259,7 @@
     }
 }
 
-@media (min-width:1600px){
+@media (min-width:1600px) {
     .presentationContainer h1 {
         font-size: 5rem;
     }
@@ -257,7 +286,7 @@
     }
 }
 
-@media (min-width:1750px){
+@media (min-width:1750px) {
 
     .presentationContainer h1 {
         font-size: 6rem;
@@ -285,3 +314,110 @@
     }
 
 }
+
+.mensajeSaludo {
+    font-size: 2.5rem;
+}
+
+.namePresentation {
+    font-size: 2.5rem;
+    animation: textAnimation .8s ease !important;
+}
+
+.imagePresentation {
+    animation: imgAnimation .8s ease !important;
+}
+
+.patherPresentation .iconoCv {
+    padding-left: 4%;
+    opacity: .8;
+}
+
+.patherPresentation .buttonPreview {
+    margin-left: 2%;
+}
+
+.patherPresentation button#light {
+    background-color: #333;
+}
+
+.patherPresentation button#light:hover {
+    background-color: #222;
+}
+
+.patherPresentation button#light.buttonPreview {
+    background-color: #ccc;
+    color: #222;
+}
+
+.patherPresentation button#light.buttonPreview:hover {
+    background-color: #ccc;
+    background-color: #ddd;
+}
+
+.patherPresentation button#dark.buttonPreview:hover {
+    border-color: transparent;
+    background-color: rgba(42, 167, 250, 0.4);
+}
+
+.patherPresentation button#dark.buttonPreview {
+    background-color: transparent;
+    border-color: rgba(42, 167, 250, 0.6);
+}
+
+.presentationContainer h6 {
+    background-color: rgb(185, 227, 255);
+    color: #0874c5;
+    font-size: .7rem;
+    margin: 0;
+    height: 1.4rem;
+    padding: 0 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.openAndRedes {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.openAndRedes button {
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 1.4rem;
+    border-radius: 50px;
+    background-color: #222;
+}
+
+.presentationContainer a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+.presentationContainer a .links {
+    margin-right: .5vw !important;
+}
+
+.presentationContainer a span {
+    padding-right: .3vw;
+    font-size: .7rem;
+}
+
+.light .openAndRedes button {
+    background-color: #ddd;
+}
+
+.light .openAndRedes button:hover {
+    background-color: #ccc;
+}
+
+.light .openAndRedes button * {
+    color: #222;
+}
+

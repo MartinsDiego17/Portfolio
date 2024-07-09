@@ -1,0 +1,89 @@
+.stackContainer {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 2%;
+    margin-bottom: 20%;
+    margin-top: 10%;
+}
+
+.stackContainer h2 {
+    color: #eee;
+    font-size: 1.5rem;
+}
+
+.stackContainer .stackGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 15px;
+}
+
+.stackGrid .techContainer {
+    background-color: rgb(0, 6, 59);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 10vw;
+    height: 11vw;
+    transition: .5s;
+    opacity: .8;
+    border: solid 1px transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.stackGrid .techContainer::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(45deg, transparent, rgb(0, 6, 95));
+    transition: top .5s ease, left .5s ease;
+    z-index: 0;
+}
+
+.stackContainer .techContainer p {
+    z-index: 50;
+    color: #ccc;
+    font-size: .8rem;
+}
+
+.stackContainer .techContainer img {
+    z-index: 50;
+}
+
+.stackContainer .techContainer:hover {
+    opacity: 1;
+    border-color: rgb(0, 2, 134);
+    filter: brightness(110%);
+    transform: scale(1.07);
+}
+
+.stackContainer .techContainer:hover::before {
+    top: -100%;
+    left: -100%;
+}
+
+.stackContainer.light h2 {
+    color: #222;
+}
+
+.stackContainer.light .techContainer {
+    background-color: rgb(0, 6, 95);
+}
+
+.stackContainer.light .techContainer:hover {
+    opacity: 1;
+    border-color: #09f;
+    filter: brightness(110%);
+    background-color: #09f;
+    transform: scale(1.07);
+}

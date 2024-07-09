@@ -1,227 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
 .projectContainer {
-    display: flex;
-    height: 55vh;
-    border-radius: 10px;
-    transition: .2s;
-    padding-right: 2%;
-    margin-bottom: 10%;
-    background: linear-gradient(transparent, transparent, transparent, rgb(0, 29, 49));
-}
-
-.projectContainer:last-child {
-    margin-bottom: 0;
-}
-
-.projectContainer .projectImage {
-    width: 70%;
-}
-
-.projectContainer .projectImage img {
-    width: 90%;
-    height: 100%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-.projectContainer .projectDetails {
-    width: 30%;
-    text-align: right;
-}
-
-.projectContainer .projectDetails h2 {
-    font-family: "Orbitron", sans-serif;
-    font-size: 2.3rem;
-}
-
-.projectContainer .projectDetails p {
-    width: 180%;
     border-radius: 5px;
-    font-size: 1rem;
-    padding: 15px;
-    margin-left: -90%;
-    background-color: rgb(0, 29, 48);
-}
-
-.projectContainer .projectDetails span {
-    color: rgb(85, 177, 238);
-    border-radius: 10px;
-    font-size: .85rem;
-    padding: 6px 14px;
-    margin-right: 5%;
-    background-color: rgb(20, 66, 97);
-}
-
-.projectContainer .projectDetails .last {
-    margin-right: 0;
-}
-
-.projectContainer .projectDetails a {
-    color: rgb(105, 195, 255);
-    text-decoration: none;
-}
-
-.projectContainer .projectDetails button {
-    margin-top: 10%;
-    border: none;
-    outline: none;
-    padding: 10px 20px;
-    transition: .2s;
-    border-radius: 30px;
     cursor: pointer;
+    opacity: 0.8;
+    height: 6.5vw;
+    width: 11vw;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: #ccc;
+    padding: 5%;
+    transition: .2s;
+    opacity: .5;
 }
 
-.projectContainer .projectDetails .buttonDemo {
-    margin-left: 20px;
-    background-color: transparent;
-    color: rgb(85, 177, 238);
-    border: solid 1px #09f;
-}
-
-.projectContainer .projectDetails .buttonRepository {
-    margin-left: 20px;
-    background-color: #09f;
-    border: solid 1px #09f;
-}
-
-.projectContainer .projectDetails .buttonRepository:hover {
-    background-color: rgb(56, 175, 255);
-    border: solid 1px rgb(56, 175, 255);
-}
-
-.projectContainer .projectDetails a .buttonRepository {
-    color: white;
-}
-
-.projectContainer .projectDetails .buttonDemo:hover {
-    background-color: #09f;
-    color: white;
+#projectSelected {
+    opacity: 1;
+    transition: .2s;
+    color: #eee;
 }
 
 .projectContainer p {
-    margin-bottom: 10%;
-}
-
-.fatherProjects .light h2 {
-    color: #333;
-}
-
-.fatherProjects .light p {
-    background-color: #eee;
-    color: #333;
-}
-
-.fatherProjects .light span {
-    background-color: #eee;
-    color: rgb(0, 153, 255);
-}
-
-.fatherProjects .light .projectContainer {
-    background: linear-gradient(transparent, transparent, transparent, rgb(0, 115, 192));
-    background: linear-gradient(transparent, transparent, transparent, #1c313f);
-}
-
-@media (max-width:729px) {
-
-    .projectContainer {
-        display: block;
-        margin-bottom: 30% !important;
-        height: 100%;
-    }
-
-    .projectContainer .projectDetails h2 {
-        font-size: 1.6rem;
-    }
-
-
-    .projectContainer .projectDetails p {
-        width: 80%;
-        margin: 0;
-        text-align: center;
-        font-size: .8rem;
-        margin: 0 auto;
-        margin-bottom: 10%;
-        margin-top: 10%;
-    }
-
-    .projectContainer .projectDetails a {
-        margin: 0;
-    }
-
-    .projectContainer .projectImage {
-        height: 40%;
-        width: 100%;
-        margin: 0;
-    }
-
-    .projectContainer .projectDetails button {
-        margin: 0 !important;
-        margin-top: 10% !important;
-        margin-bottom: 10% !important;
-    }
-
-    .projectContainer .projectDetails button:first-child {
-        margin-right: 5% !important;
-    }
-
-    .projectContainer .projectDetails button:last-child {
-        margin-left: 5% !important;
-    }
-
-
-    .projectContainer .projectImage img {
-        border-radius: 0;
-        width: 100%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-    }
-
-    .projectContainer .projectDetails {
-        text-align: center;
-        width: 100%;
-    }
-
-}
-
-@media (max-width:1000px) {
-
-    .projectContainer .projectDetails h2 {
-        font-size: 1.6rem;
-    }
-
-    .projectContainer .projectDetails p {
-        font-size: .8rem;
-    }
-
-    .projectContainer .projectDetails span {
-        font-size: .65rem;
-    }
-
-    .projectContainer .projectDetails button {
-        padding: 8px 17px;
-        font-size: .6rem;
-    }
-
-}
-
-
-@media (min-width:1600px) {
-    .projectsContainer .projectDetails h2 {
-        font-size: 3rem;
-    }
-
-    .projectContainer .projectDetails p {
-        font-size: 1.3rem;
-    }
-
-    .projectContainer .projectDetails span {
-        font-size: 1rem;
-        padding: 7px 20px;
-    }
-
-    .projectContainer .projectDetails button {
-        padding: 13px 25px;
-        font-size: 1rem;
-    }
+    font-size: .8rem;
+    color: white;
 }

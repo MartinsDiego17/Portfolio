@@ -124,10 +124,10 @@ const Contact = () => {
   const { currentLenguaje } = useStoreLenguaje();
 
   const text1 = currentLenguaje === "es" ? "VAMOS A " : "LET'S GO ";
-  const text2 = currentLenguaje === "es" ? "TRABAJAR." : "TO WORK.";
+  const text2 = currentLenguaje === "es" ? "TRABAJAR" : "TO WORK";
   const frase = currentLenguaje === "es"
-    ? "Convirtiendo ideas en éxitos con soluciones efectivas."
-    : "Turning ideas into successes with effective solutions.";
+    ? "Llevemos tu proyecto al siguiente nivel"
+    : "Let's take your project to the next level";
   const ph1 = currentLenguaje === "es" ? "Nombre" : "Name";
   const ph3 = currentLenguaje === "es" ? "Mensaje" : "Message";
   const boton = currentLenguaje === "es" ? "Enviar" : "Send";

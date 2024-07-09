@@ -1,7 +1,6 @@
-import { Nunito_Sans, Inter_Tight } from 'next/font/google'
+import { Inter_Tight } from 'next/font/google'
 import './globals.css';
 import Header from './components/header/Header';
-import { useStoreTheme } from './zustand';
 
 const nunito = Inter_Tight({ subsets: ['latin'] })
 

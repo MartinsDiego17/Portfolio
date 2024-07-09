@@ -1,14 +1,21 @@
+import { useStoreTheme } from '@/app/zustand';
 import './job.css';
 
-const Job = ({ title, name, description, habilities, date }) => {
+const Job = ({ name, date, title, description, habilities, type, link }) => {
+
+    const { theme } = useStoreTheme();
+
     return (
-        <div className='jobContainer' >
-            <h2><span>.</span>{title} -<strong> {name}</strong></h2>
-            <div className='detailsJob' >
-                {description && <p>{description}</p>}
-                {habilities && <p>{habilities}</p>}
-                <small>{date}</small>
-            </div>
+        <div className={`jobFather ${theme}`} >
+            <div className='verticalLine' ></div>
+            <time datetime="">{date}</time>
+            <h3>{title} - {name}</h3>
+            <p>{description}</p>
+            {
+                habilities.map((hab, index) => (
+                    <span className={`habSpan ${!index && "firstHab"}`} >{hab}</span>
+                ))
+            }
         </div>
     )
 }

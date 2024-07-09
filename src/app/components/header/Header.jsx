@@ -13,7 +13,6 @@ const Header = () => {
 
     const { changeTheme, theme } = useStoreTheme();
     const { changeCurrentLenguaje, currentLenguaje } = useStoreLenguaje();
-
     const [border, setBorder] = useState({
         home: '',
         about: '',
@@ -22,7 +21,6 @@ const Header = () => {
         theme: '',
         lenguaje: ''
     });
-
     const [borderLight, setBorderLight] = useState({
         home: '',
         about: '',
@@ -31,7 +29,6 @@ const Header = () => {
         theme: '',
         lenguaje: ''
     });
-
     const scroll = (n, li) => {
 
         if (theme === 'dark') {
@@ -51,11 +48,9 @@ const Header = () => {
             behavior: 'smooth'
         });
     };
-
     const fnChangeCurrentLenguaje = () => {
         changeCurrentLenguaje()
     }
-
     const fnChangeTheme = (li) => {
         changeTheme();
         scroll(null, li);
@@ -90,19 +85,16 @@ const Header = () => {
         fn: () => scroll(2000, 'home'),
         texto: proyectos
     }
-
     const contactoLi = {
         clase: border.contact + ' ' + theme + ' ' + borderLight.contact,
         fn: () => scroll(20000, 'home'),
         texto: contacto
     }
-
     const temaLi = {
         claseIcon: theme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun',
         fn: () => fnChangeTheme(theme),
         clase: ' ' + borderLight.theme,
     }
-
     const idiomaLi = {
         claseIcon: currentLenguaje === 'es' ? es : en,
         clase: border.about + ' ' + theme + ' ' + borderLight.about,
@@ -112,42 +104,43 @@ const Header = () => {
 
     return (
         <nav id={'header-nav-' + theme} className={'headerContainer ' + theme} >
-            {/* <h1 onClick={() => scroll(0, 'home')} className={theme} >MARTINS</h1> */}
 
             <h1 onClick={() => scroll(0, 'home')} className={theme} >MARTINS</h1>
 
             <ul className='ulNormal' >
 
-                <li className={border.home + ' ' + theme + ' ' + borderLight.home} onClick={() => scroll(0, 'home')} >{inicio}</li>
+                <li
+                    className={border.home + ' ' + theme + ' ' + borderLight.home}
+                    onClick={() => scroll(0, 'home')} >{inicio  }</li>
 
-                <li className={border.about + ' ' + theme + ' ' + borderLight.about} onClick={() => scroll(600, 'about')} >{acerca}</li>
+                <li
+                    className={border.about + ' ' + theme + ' ' + borderLight.about}
+                    onClick={() => scroll(600, 'about')} >{acerca}</li>
 
-                <li className={border.projects + ' ' + theme + ' ' + borderLight.projects} onClick={() => scroll(2000, 'projects')} >{proyectos}</li>
+                <li
+                    className={border.projects + ' ' + theme + ' ' + borderLight.projects}
+                    onClick={() => scroll(2000, 'projects')} >{proyectos}</li>
 
-                <li className={border.contact + ' ' + theme + ' ' + borderLight.contact} onClick={() => scroll(4000, 'contact')} >{contacto}</li>
+                <li
+                    className={border.contact + ' ' + theme + ' ' + borderLight.contact}
+                    onClick={() => scroll(4000, 'contact')} >{contacto}</li>
 
                 {theme === "dark" ? (
-                    <li onClick={() => fnChangeTheme(theme)}>
+                    <li onClick={() => fnChangeTheme(theme)} className='iconThemeDark' >
                         <i className={"fa-solid fa-moon " + theme + ' ' + borderLight.theme}></i>
                     </li>
                 ) : (
-                    <li onClick={() => fnChangeTheme(theme)}>
+                    <li onClick={() => fnChangeTheme(theme)} className='iconThemeLight' >
                         <i className={"fa-solid fa-sun " + theme + ' ' + borderLight.theme}></i>
                     </li>
                 )}
 
-                <li className='currentLenguaje' >
-                    {currentLenguaje === "es" ? (
-                        <div className='currentLenguajeDiv'>
-                            <span className='currentLenguajeSpan' >ES</span>
-                            <Image onClick={fnChangeCurrentLenguaje} src={es} width={20} height={20} alt={currentLenguaje} />
-                        </div>
-                    ) : (
-                        <div className='currentLenguajeDiv' >
-                            <span className='currentLenguajeSpan' >EN</span>
-                            <Image onClick={fnChangeCurrentLenguaje} src={en} width={20} height={20} alt={currentLenguaje} />
-                        </div>
-                    )}
+
+                <li onClick={fnChangeCurrentLenguaje} className="currentLenguaje" id={theme}>
+                    <div className="currentLenguajeDiv">
+                        <span className="currentLenguajeSpan">{currentLenguaje.toUpperCase()}</span>
+                        <Image src={currentLenguaje === "es" ? es : en} width={20} height={20} alt={currentLenguaje} />
+                    </div>
                 </li>
 
             </ul>

@@ -2,53 +2,55 @@
 import { useStoreLenguaje, useStoreTheme } from '@/app/zustand';
 import './experience.css';
 import Job from './lastjob/Job';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 const Experience = () => {
 
     const { theme } = useStoreTheme();
     const { currentLenguaje } = useStoreLenguaje();
-
-    const experiencia = currentLenguaje === "es" ? "EXPERIENCIA" : "EXPERIENCE";
-
-    const title1 = currentLenguaje === "es" ? "Fabricante de productos de aromaterapia" : "Aromatherapy product manufacturer.";
-
-    const description1 = currentLenguaje === "es" 
-    ? "Gestión y producción de una variedad de productos de aromaterapia, asegurando altos estándares de calidad y eficiencia operativa." 
-    : "Management and production of a variety of aromatherapy products, ensuring high standards of quality and operational efficiency.";
-
-    const habilities1 = currentLenguaje === "es" 
-    ? "Control de calidad - Desarrollo de productos - Eficiencia operativa" 
-    : "Quality control - Product development - Operational efficiency";
-
-    const title2 = currentLenguaje === "es" ? "Atención al cliente" : "Customer service";
-
-    const description2 = currentLenguaje === "es" 
-    ? "Experiencia en atención al cliente como vendedor de productos de aromaterapia en ferias artesanales, proporcionando información detallada y asesoramiento a los clientes." 
-    : "Extensive customer service experience as a seller of aromatherapy products at craft fairs, providing comprehensive information and personalized guidance to customers.";
-
-    const habilities2 = currentLenguaje === "es" 
-    ? "Servicio al cliente - Comunicación efectiva - Venta de productos" 
-    : "Customer service - Effective communication - Product sales";
+    const experiencia = currentLenguaje === "es" ? "Experiencia laboral" : "Work experience";
+    const experiencias = [
+        {
+            name: "La barra boulevard",
+            date: currentLenguaje === "es" ? "Actualmente..." : "Actually...",
+            title: currentLenguaje === "es" ? "Desarrollador full-stack" : "Full-stack developer",
+            description: currentLenguaje === "es" ? "En esta ocasión pude implementar mis conocimientos técnicos para la empresa en la cuál trabajé anteriormente, desarrollando y diseñando un e-commerce web full stack con su respectiva base de datos." : "On this occasion, I was able to apply my technical knowledge for the company I previously worked for, developing and designing a full-stack e-commerce website with its respective database.",
+            habilities: currentLenguaje === "es" ? ["desarrollo web", "gestión de base de datos", "diseño full-stack"] : ["web development", "database management", "full-stack design"],
+            type: "laboral",
+            link: "https://www.instagram.com/labarraboulevard/"
+        },
+        {
+            name: "La barra boulevard",
+            date: "2023 - 2024",
+            title: currentLenguaje === "es" ? "Ayudante de cocina" : "Kitchen assistant",
+            description: currentLenguaje === "es" ? "en el puesto de ayudante de cocina, desempeñé un rol crucial a la hora de la producción de las tareas en un entorno de alta exigencia. " : "In the role of kitchen assistant, I played a crucial role in task production in a high-demand environment.",
+            habilities: currentLenguaje === "es" ? ["gestión del tiempo", "organización", "trabajo en equipo"] : ["time management", "organization", "team work"],
+            type: "laboral",
+            link: "https://www.instagram.com/labarraboulevard/"
+        },
+        {
+            name: "La barra boulevard",
+            date: "2023 - 2024",
+            title: currentLenguaje === "es" ? "Mesero" : "Waiter",
+            description: currentLenguaje === "es" ? "en este puesto, tuve la oportunidad de llevar a cabo tareas relacionadas con la atención al cliente, las cuales me permitieron desarrollar multiples habilidades comunicativas." : "In this position, I had the opportunity to carry out tasks related to customer service, which allowed me to develop multiple communication skills.",
+            habilities: currentLenguaje === "es" ? ["atención al cliente", "comunicación efectiva", "resolución de conflictos"] : ["customer service", "communication skills", "conflict resolution"],
+            type: "laboral",
+            link: "https://www.instagram.com/labarraboulevard/"
+        }
+    ]
 
     return (
-        <div className='fatherExperience' >
-            <div className={'experienceContainer '+theme}>
-                <h1>{experiencia}</h1>
-                <Job
-                    title={title1}
-                    name={'Vishuddh'}
-                    description={description1}
-                    habilities={habilities1}
-                    date={'2018 - 2023'}
-                />
-                <Job
-                    title={title2}
-                    name={'Vishuddh'}
-                    description={description2}
-                    habilities={habilities2 }
-                    date={'2018 - 2023'}
-                />
-            </div>
+        <div className={`experienceContainer ${theme}`} >
+            <h2> <i class="fa-solid fa-briefcase"></i> {experiencia}</h2>
+            <ol>
+                {
+                    experiencias.map(experience => (
+                        <li>
+                            <Job {...experience} />
+                        </li>
+                    ))
+                }
+            </ol>
         </div>
     );
 }
