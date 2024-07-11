@@ -50,7 +50,7 @@ const Stack = () => {
           <p>Node js</p>
         </div>
         <div className="techContainer">
-          <Image src={nextjs} alt='Next js' width={30} height={30} />
+          <Image src={theme === "dark" ? nextjs : nextjsdark} alt='Next js' width={30} height={30} />
           <p>Next js</p>
         </div>
         <div className="techContainer">

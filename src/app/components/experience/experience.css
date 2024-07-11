@@ -25,3 +25,11 @@
 .experienceContainer.light h2 {
     color: #333; 
 }
+
+@media (max-width: 729px) {
+    .experienceContainer {
+        width:  80vw;
+        display: flex;
+        flex-direction: column;
+    }
+}

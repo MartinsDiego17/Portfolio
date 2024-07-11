@@ -51,22 +51,23 @@ const Presentation = () => {
                     <h2>{text}</h2>
                     <p>{parrafo}</p>
                     <div className='openAndRedes' >
-                        <h6>{openToWork}</h6>
+                        <h6>{openToWork}</h6> 
                         <button>
                             <Link href='https://www.linkedin.com/in/diego-martins-563954278/' target='_BLANK' >
-                                <i className="fa-brands fa-linkedin links "></i><span>Linkedin</span>
+                                <i className="fa-brands fa-linkedin links "></i><span className='textRed' >Linkedin</span>
                             </Link>
                         </button>
                         <button>
                             <Link href='https://github.com/MartinsDiego17' target='_BLANK'>
-                                <i className="fa-brands fa-github links"></i><span>Github</span>
+                                <i className="fa-brands fa-github links"></i><span className='textRed' >Github</span>
                             </Link>
                         </button>
                         <button>
                             <Link href={'mailto:martinsdiego0513@outlook.es'}>
-                                <i className="fa-solid fa-envelope links"></i><span>diegomartinsupe@hotmail.com</span>
+                                <i className="fa-solid fa-envelope links"></i><span className='textRed' >diegomartinsupe@hotmail.com</span>
                             </Link>
                         </button>
+
 
                     </div>
                     <div className='detailsPresentation' >

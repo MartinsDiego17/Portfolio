@@ -1,8 +1,8 @@
-import { Inter_Tight } from 'next/font/google'
+import { Inter_Tight, Onest } from 'next/font/google'
 import './globals.css';
 import Header from './components/header/Header';
 
-const nunito = Inter_Tight({ subsets: ['latin'] })
+const nunito = Onest({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Diego | Personal Portfolio',

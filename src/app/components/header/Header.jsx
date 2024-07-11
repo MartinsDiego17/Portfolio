@@ -2,10 +2,11 @@
 import { useState } from 'react';
 import './header.css';
 import { useStoreLenguaje, useStoreTheme } from '@/app/zustand';
-import es from './es.svg';
-import en from './en.svg';
-import Image from 'next/image';
+import { MdOutlineWbSunny } from "react-icons/md";
+import lenguajeIcon from './lenguajeIcon.svg';
+import lenguajeIcon2 from './lenguajeIcon2.svg';
 import Burguer from './burguer/Burguer';
+import Image from 'next/image';
 
 const Header = () => {
 
@@ -13,41 +14,7 @@ const Header = () => {
 
     const { changeTheme, theme } = useStoreTheme();
     const { changeCurrentLenguaje, currentLenguaje } = useStoreLenguaje();
-    const [border, setBorder] = useState({
-        home: '',
-        about: '',
-        projects: '',
-        contact: '',
-        theme: '',
-        lenguaje: ''
-    });
-    const [borderLight, setBorderLight] = useState({
-        home: '',
-        about: '',
-        projects: '',
-        contact: '',
-        theme: '',
-        lenguaje: ''
-    });
-    const scroll = (n, li) => {
 
-        if (theme === 'dark') {
-            setBorder({
-                [li]: 'border'
-            })
-        } else if (theme === 'light') {
-            setBorderLight({
-                [li]: 'borderLight'
-            })
-        }
-
-        if (n === null) return;
-
-        window.scrollTo({
-            top: n,
-            behavior: 'smooth'
-        });
-    };
     const fnChangeCurrentLenguaje = () => {
         changeCurrentLenguaje()
     }
@@ -60,7 +27,6 @@ const Header = () => {
             return;
         }
         body.classList.add('bodyLight')
-
     }
 
     const inicio = currentLenguaje === 'es' ? 'Inicio' : 'Home';
@@ -68,100 +34,25 @@ const Header = () => {
     const proyectos = currentLenguaje === 'es' ? 'Proyectos' : 'Projects';
     const contacto = currentLenguaje === 'es' ? 'Contacto' : 'Contact';
 
-    const inicioLi = {
-        clase: border.home + ' ' + theme + ' ' + borderLight.home,
-        fn: () => scroll(0, 'home'),
-        texto: inicio
-    }
-
-    const acercaLi = {
-        clase: border.about + ' ' + theme + ' ' + borderLight.about,
-        fn: () => scroll(600, 'home'),
-        texto: acerca
-    }
-
-    const proyectosLi = {
-        clase: border.projects + ' ' + theme + ' ' + borderLight.projects,
-        fn: () => scroll(2000, 'home'),
-        texto: proyectos
-    }
-    const contactoLi = {
-        clase: border.contact + ' ' + theme + ' ' + borderLight.contact,
-        fn: () => scroll(20000, 'home'),
-        texto: contacto
-    }
-    const temaLi = {
-        claseIcon: theme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun',
-        fn: () => fnChangeTheme(theme),
-        clase: ' ' + borderLight.theme,
-    }
-    const idiomaLi = {
-        claseIcon: currentLenguaje === 'es' ? es : en,
-        clase: border.about + ' ' + theme + ' ' + borderLight.about,
-        texto: currentLenguaje,
-        fn: fnChangeCurrentLenguaje
-    }
-
     return (
-        <nav id={'header-nav-' + theme} className={'headerContainer ' + theme} >
-
-            <h1 onClick={() => scroll(0, 'home')} className={theme} >MARTINS</h1>
-
-            <ul className='ulNormal' >
-
-                <li
-                    className={border.home + ' ' + theme + ' ' + borderLight.home}
-                    onClick={() => scroll(0, 'home')} >{inicio  }</li>
-
-                <li
-                    className={border.about + ' ' + theme + ' ' + borderLight.about}
-                    onClick={() => scroll(600, 'about')} >{acerca}</li>
-
-                <li
-                    className={border.projects + ' ' + theme + ' ' + borderLight.projects}
-                    onClick={() => scroll(2000, 'projects')} >{proyectos}</li>
-
-                <li
-                    className={border.contact + ' ' + theme + ' ' + borderLight.contact}
-                    onClick={() => scroll(4000, 'contact')} >{contacto}</li>
-
-                {theme === "dark" ? (
-                    <li onClick={() => fnChangeTheme(theme)} className='iconThemeDark' >
-                        <i className={"fa-solid fa-moon " + theme + ' ' + borderLight.theme}></i>
-                    </li>
-                ) : (
-                    <li onClick={() => fnChangeTheme(theme)} className='iconThemeLight' >
-                        <i className={"fa-solid fa-sun " + theme + ' ' + borderLight.theme}></i>
-                    </li>
-                )}
-
-
-                <li onClick={fnChangeCurrentLenguaje} className="currentLenguaje" id={theme}>
-                    <div className="currentLenguajeDiv">
-                        <span className="currentLenguajeSpan">{currentLenguaje.toUpperCase()}</span>
-                        <Image src={currentLenguaje === "es" ? es : en} width={20} height={20} alt={currentLenguaje} />
-                    </div>
-                </li>
-
-            </ul>
-
-            <h3 className={'burgerMenu ' + theme}>
-                <i className="fa-solid fa-bars" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                    <Burguer
-                        isOpen={isMenuOpen}
-                        closeMenu={setIsMenuOpen}
-                        inicio={inicioLi}
-                        acerca={acercaLi}
-                        proyectos={proyectosLi}
-                        contacto={contactoLi}
-                        tema={temaLi}
-                        idioma={idiomaLi}
-                    />
-                </i>
-            </h3>
-
-
-        </nav>
+        <>
+            <div className="patherNav">
+                <div className={`navContainer ${theme}`} >
+                    <ul>
+                        <li>{inicio}</li>
+                        <li>{acerca}</li>
+                        <li>{proyectos}</li>
+                        <li>{contacto}</li>
+                        <li onClick={fnChangeTheme}><MdOutlineWbSunny /></li>
+                        <li
+                            className='lenguaje'
+                            onClick={fnChangeCurrentLenguaje} >
+                            <Image src={theme === "dark" ? lenguajeIcon : lenguajeIcon2} />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </>
     )
 }
 

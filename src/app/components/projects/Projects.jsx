@@ -4,9 +4,11 @@ import vorttex from './vorttex.jpeg';
 import pokedex from './pokedex.jpeg';
 import labarra from './labarra.jpeg';
 import { useStoreLenguaje, useStoreTheme } from '@/app/zustand';
-import { useEffect, useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.css';
 import Project from './project/Project';
+import '@fortawesome/fontawesome-free/css/all.css';
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const Projects = () => {
 
@@ -46,90 +48,19 @@ const Projects = () => {
             github: "https://github.com/MartinsDiego17/PI-Pokemon-main"
         }
     ];
-    const [localProjects, setLocalProjects] = useState(projects);
-    useEffect(() => {
-        setLocalProjects(projects);
-    }, []);
-    const arrows = ["<", ">"];
-
     const [selected, setSelected] = useState(projects[0]);
     const [indice, setIndice] = useState(0);
 
-    const text = currentLenguaje === "es" ? "Proyecto" : "Project";
-    const handleProject = (op) => {
-        let index;
-        if (op === 0 && indice > 0) {
-            setIndice(indice - 1);
-            index = indice - 1;
-            setSelected(projects[index]);
-        } else if (op === 1 && indice + 1 !== projects.length) {
-            setIndice(indice + 1);
-            index = indice + 1;
-            setSelected(projects[index]);
-        }
-    };
-
-    let projectsRender = localProjects;
+    const text = currentLenguaje === "es" ? "Proyectos" : "Projects";
 
     return (
-        <div className='patherProjects' >
-
-            <div
-                className={'projectsContainer ' + theme}
-                style={{ backgroundImage: `url(${selected.image.src && selected.image.src})` }}
-            >
-                <section>
-                    <article className='detailsArrows' >
-                        <div>
-                            <p className='text' >{text.toUpperCase()}</p>
-                            <h1>{selected.title.toUpperCase()}
-                                <div className='quantity' >
-                                    {selected.quantity} <i class="fa-solid fa-user"></i>
-                                </div>
-                            </h1>
-                            <p className='description' >{selected.description}</p>
-                            {
-                                selected.deploy && <a href={selected.deploy} target='_blank'>
-                                    <button className='links' >Demo <i class="fa-solid fa-link"></i></button>
-                                </a>
-                            }
-                            <a href={selected.github} target='_blank' >
-                                <button className='links' >Code <i class="fa-brands fa-github"></i></button>
-                            </a>
-                            {selected?.stack &&
-                                selected.stack.map((hab, index) => (
-                                    <span className='habilitie' >{hab}</span>
-                                ))
-                            }
-                        </div>
-                        <div className='buttonsChange' >
-                            <button onClick={() => handleProject(0)} className='change' >{arrows[0]}</button>
-                            <button onClick={() => handleProject(1)} className='change' >{arrows[1]}</button>
-                        </div>
-                    </article>
-
-                    <article className='projectsOp' >
-                        {
-                            projectsRender.length &&
-                            projectsRender.map((proyecto, index) => (
-                                (
-                                    <div key={index} className='divProject'>
-                                        <Project
-                                            projects={projects}
-                                            title={proyecto.title}
-                                            imagen={proyecto.image}
-                                            id={index}
-                                            isSelected={proyecto.title === selected.title}
-                                            setSelected={setSelected}
-                                            setIndice={setIndice}
-                                        />
-                                    </div>
-                                )
-                            ))
-                        }
-                    </article>
-                </section>
-            </div>
+        <div className={`projectsContainer ${theme}`}>
+            <h2>{text}</h2>
+            {
+                projects.map((pro, index) => (
+                    <Project {...pro} />
+                ))
+            }
         </div>
     );
 }

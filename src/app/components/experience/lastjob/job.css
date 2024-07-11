@@ -7,8 +7,8 @@
 
 .jobFather .verticalLine {
     position: absolute;
-    width: 0.75rem;
-    height: 0.75rem;
+    width: .75rem;
+    height: .75rem;
     background-color: #ddd;
     border-radius: 9999px;
     margin-top: 0.375rem;
@@ -53,7 +53,7 @@
     padding: .8% 2%;
     margin-right: 2%;
     background-color: #222;
-    border-radius: 50px;   
+    border-radius: 50px;
 }
 
 
@@ -61,7 +61,7 @@
     margin-left: 5%;
 }
 
-.jobFather.light .verticalLine{
+.jobFather.light .verticalLine {
     background-color: #1d2555;
 }
 
@@ -75,7 +75,46 @@
 }
 
 .jobFather.light .habSpan {
-    background-color: #eee; 
+    background-color: #eee;
     color: #1d2555;
     opacity: 1;
+}
+
+.jobFather .divHabilities {
+    padding-left: 0;
+}
+
+@media(max-width: 729px) {
+    .jobFather {
+        height: 30vh;
+    }
+    .experienceContainer .jobFather {
+        padding-bottom: 10vh;
+    }
+
+    .jobFather h3 {
+        font-size: 1rem;
+        text-wrap: pretty;
+    }
+
+    .jobFather p {
+        text-wrap: balance;
+    }
+
+    .jobFather .divHabilities {
+        display: flex;
+        flex-direction: column;
+        margin: 10vh 0;
+        padding-left: 5%;
+    }
+
+    .jobFather .divHabilities .firstHab {
+        margin-left: 0;
+    }
+
+    .jobFather .divHabilities span {
+        padding: 2px 10px;
+        width: fit-content;
+        margin-bottom: 1vh;
+    }
 }

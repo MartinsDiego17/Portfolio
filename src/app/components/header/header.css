@@ -1,294 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-
-.headerContainer {
-    background-color: rgb(0 0 0 / 85%);
-    background-color: transparent;
-    display: flex;
-    color: white;
-    justify-content: space-between;
-    align-items: center;
-    height: 55px;
+.patherNav {
     position: fixed;
-    z-index: 100;
+    display: flex;
+    justify-content: center;
     width: 100vw;
-    top: 0;
+    z-index: 1000;
 }
 
-.headerContainer h1 {
-    margin-left: 10%;
-    font-size: 2rem;
-    font-family: "Orbitron", sans-serif;
-    width: fit-content;
-    cursor: pointer;
+.patherNav * {
+    padding: 0;
+    margin: 0;
 }
 
-.headerContainer ul {
+.navContainer {
+    border-radius: 30px;
+    margin: 0 auto;
+    padding: 15px;
+    width: 40vw;
+}
+
+.navContainer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.navContainer ul li {
     display: flex;
     align-items: center;
-    width: 43%;
-    margin-right: 10%;
-    justify-content: space-between;
-}
-
-.headerContainer ul li {
-    font-size: .75rem !important;
-    list-style: none;
-    color: #aaa;
+    margin: 0 20px;
+    font-size: .85rem;
     cursor: pointer;
-    font-weight: 500;
     transition: .2s;
-    border-bottom: solid 2px transparent;
-    padding-bottom: 3px;
-    border-bottom: 1px solid transparent;
 }
 
-.headerContainer ul li:hover {
-    color: white;
-}
-
-#header-nav-dark {
-    animation: blur linear both;
+.navContainer.dark {
+    animation: blurDark linear both;
     animation-timeline: scroll();
     animation-range: 0 500px;
 }
 
-@keyframes blur {
-    to {
-        background-color: rgb(0 0 0 / 65%);
-        backdrop-filter: blur(10px);
-    }
-}
-
-#header-nav-light {
+.navContainer.light {
     animation: blurLight linear both;
     animation-timeline: scroll();
-    animation-range: 0 200px;
+    animation-range: 0 500px;
+}
+
+@keyframes blurDark {
+    to {
+        margin-top: 10px;
+        background-color: rgba(95, 95, 95, 0.35);
+        backdrop-filter: blur(30px);
+    }
 }
 
 @keyframes blurLight {
     to {
-        box-shadow: 0px 0px 7px #999;
-        background-color: #ffffff;
+        margin-top: 10px;
+        background-color: rgba(95, 95, 95, 0.45);
+        backdrop-filter: blur(30px);
     }
 }
 
+.navContainer.dark {
+    color: #eee;
+}
 
-.headerContainer .border {
+.navContainer.dark ul li:hover {
     color: white;
-    border-color: rgb(0, 100, 167);
-}
-
-.headerContainer .light {
-    transition: .2s;
-    color: black;
-}
-
-.headerContainer .light:first-child:hover {
-    color: black;
-}
-
-
-.headerContainer .light:hover {
-    color: black;
-}
-
-
-.bodyLight {
-    background-image: repeating-linear-gradient(45deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 10px, transparent 10px, transparent 11px), repeating-linear-gradient(135deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 10px, transparent 10px, transparent 11px), linear-gradient(90deg, hsl(256, 7%, 84%), hsl(256, 7%, 84%));
-}
-
-.headerContainer .borderLight {
-    color: #222;
-}
-
-.currentLenguajeSpan {
-    color: #bbb;
-    display: block;
-}
-
-.light .currentLenguajeDiv span {
-    color: black;
-    font-weight: 300;
-}
-
-.currentLenguajeDiv img {
-    cursor: pointer;
-}
-
-.headerContainer .burgerMenu {
-    display: none;
-}
-
-.headerContainer .currentLenguaje {
-    width: 7.5%;
-}
-
-.currentLenguajeDiv {
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-}
-
-.headerContainer h3 {
-    margin-right: 10%;
-}
-
-@media (max-width: 729px) {
-
-    .headerContainer .ulNormal {
-        display: none;
-    }
-
-    .headerContainer .burguerContainer {
-        display: block !important;
-    }
-
-    nav h3 .light {
-        color: black;
-    }
-
-    .headerContainer .burgerMenu {
-        display: block;
-    }
-
-    .headerContainer h2 {
-        font-size: 1.3rem;
-    }
-
-    .headerContainer {
-        display: flex;
-        justify-content: space-between;
-    }
-
-}
-
-
-@media (min-width: 730px) {
-
-    .headerContainer .burgerMenu {
-        display: none;
-    }
-
-    .headerContainer ul {
-        width: 50%;
-        display: flex;
-    }
-
-    .headerContainer ul li {
-        font-size: .6rem;
-    }
-
-    .headerContainer h2 {
-        font-size: 2rem;
-    }
-
-    .headerContainer .currentLenguajeDiv img {
-        height: 15px;
-    }
-
-}
-
-@media (min-width: 1000px) {
-
-    .headerContainer ul {
-        width: 43%;
-    }
-
-    .headerContainer ul li {
-        font-size: .9rem;
-    }
-
-    .headerContainer .currentLenguajeDiv img {
-        height: 25px;
-    }
-
-}
-
-@media (max-width:1000px) {
-    .headerContainer {
-        height: 45px;
-        align-items: center;
-    }
-
-    .headerContainer h1 {
-        font-size: 1.5rem;
-    }
-
-}
-
-@media (min-width: 1441px) {
-    .headerContainer ul {
-        width: 43%;
-    }
-
-    .headerContainer ul li {
-        font-size: 1.1rem;
-    }
-
-}
-
-.headerContainer .iconThemeLight,
-.headerContainer .iconThemeDark {
-    padding: 5px 10px;
-    border-radius: 8px;
-    border: solid 2px transparent;
-}
-
-.headerContainer .iconThemeLight,
-.headerContainer .iconThemeDark:hover {
-    border-color: transparent !important;
-}
-
-.headerContainer .iconThemeDark {
-    background-color: #222;
-}
-
-.headerContainer .iconThemeLight {
-    background-color: #ddd;
-}
-
-.headerContainer .iconThemeLight * {
-    color: #222;
-}
-
-.headerContainer .iconThemeLight:hover {
-    background-color: #ccc;
-}
-
-.headerContainer .currentLenguajeDiv {
-    transition: .2s;
-    padding: 2px 15px;
-    border-radius: 10px;
-    border: solid 2px transparent;
-}
-
-
-.headerContainer .currentLenguajeDiv:hover {
-    border-color: transparent;
-}
-
-.currentLenguaje {
-    border-radius: 10px;
-    width: 6vw !important;
-}
-
-.currentLenguaje:hover {
-    border-color: transparent !important;
-}
-
-.currentLenguaje#light div {
-    background-color: #ddd;
-    color: #222;
-}
-
-.currentLenguaje#light div:hover {
-    background-color: #ccc !important;
-}
-
-.currentLenguaje#dark div {
-    background-color: #222;
-}
-
-.headerContainer ul {
-    margin: 0 auto !important;
 }

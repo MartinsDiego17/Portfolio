@@ -60,3 +60,38 @@
 .patherAbout.patherAbout.light .education p {
     color: #aaa;
 }
+
+@media (max-width: 729px) {
+    .patherAbout {
+        margin-top: 15vh;
+        height: 100vh;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding-bottom: 0;
+        padding-top: 10%;
+    }
+
+    .patherAbout section {
+        flex-direction: column;
+    }
+
+    .patherAbout section article {
+        width: 80% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .patherAbout .about p {
+        text-align: center;
+    }
+
+    .patherAbout .education {
+        margin-top: 15%;
+    }
+
+    .patherAbout .education .jobFather {
+        margin-left: 0;
+        height: 10vh;
+    }
+}
