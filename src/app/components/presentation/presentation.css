@@ -378,11 +378,10 @@
 .presentationContainer h6 {
     background-color: rgb(185, 227, 255);
     color: #0874c5;
-    font-size: .7rem;
+    font-size: .9vw;
     margin: 0;
     height: 1.4rem;
     padding: 0 8px;
-
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -396,10 +395,10 @@
 
 .openAndRedes button {
     width: fit-content;
-    padding: 10px;
+    padding: .8vw;
     display: flex;
     align-items: center;
-    height: 1.4rem;
+    height: 1.4vw;
     border-radius: 50px;
     background-color: #222;
 }

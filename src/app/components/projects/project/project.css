@@ -21,7 +21,7 @@
 }
 
 .projectContainer h3 {
-    font-size: 1.5rem;
+    font-size: 1.73vw;
 }
 
 .projectContainer .habilities {
@@ -29,7 +29,7 @@
 }
 
 .projectContainer .habilities span {
-    font-size: .8rem;
+    font-size: .95vw;
     gap: 0;
     opacity: .8;
     padding: .8% 2%;
@@ -43,6 +43,7 @@
     text-wrap: balance;
     color: #9CA3AF;
     line-height: 1.4;
+    font-size: 1.2vw;
     margin-top: 6%;
 }
 
@@ -56,11 +57,10 @@
     border: none;
     font-weight: 60 0;
     outline: none;
-    padding: 10px 20px;
-    font-size: .8rem;
+    padding: .8vw 1.5vw;
     transition: .2s;
     border-radius: 20px;
-    font-size: .9rem;
+    font-size: 1vw;
     cursor: pointer;
     background: linear-gradient(45deg, rgb(0, 8, 80), rgb(0, 9, 131));
 }

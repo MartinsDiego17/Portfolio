@@ -15,7 +15,7 @@ const Experience = () => {
             date: currentLenguaje === "es" ? "Actualmente..." : "Actually...",
             title: currentLenguaje === "es" ? "Desarrollador full-stack" : "Full-stack developer",
             description: currentLenguaje === "es" ? "En esta ocasión pude implementar mis conocimientos técnicos para la empresa en la cuál trabajé anteriormente, desarrollando y diseñando un e-commerce web full stack con su respectiva base de datos." : "On this occasion, I was able to apply my technical knowledge for the company I previously worked for, developing and designing a full-stack e-commerce website with its respective database.",
-            habilities: currentLenguaje === "es" ? ["desarrollo web", "gestión de base de datos", "diseño full-stack"] : ["web development", "database management", "full-stack design"],
+            habilities: currentLenguaje === "es" ? ["desarrollo web", "base de datos", "diseño full-stack"] : ["web development", "database", "full-stack design"],
             type: "laboral",
             link: "https://www.instagram.com/labarraboulevard/"
         },

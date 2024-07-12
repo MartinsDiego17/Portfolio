@@ -52,11 +52,11 @@
 .stackContainer .techContainer p {
     z-index: 50;
     color: #ccc;
-    font-size: .8rem;
+    font-size: .95vw;
 }
 
 .stackContainer .techContainer img {
-    z-index: 50;
+    opacity: .9;
 }
 
 .stackContainer .techContainer:hover {

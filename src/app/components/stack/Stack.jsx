@@ -26,51 +26,51 @@ const Stack = () => {
       <h2>Stack</h2>
       <div className="stackGrid">
         <div className="techContainer">
-          <Image src={js} alt='Javascript' width={30} height={30} />
+          <Image src={js} alt='Javascript' width={50} height={50} />
           <p>Javascript</p>
         </div>
         <div className="techContainer">
-          <Image src={c} alt='C' width={30} height={30} />
+          <Image src={c} alt='C' width={50} height={50} />
           <p>C</p>
         </div>
         <div className="techContainer">
-          <Image src={react} alt='React js' width={30} height={30} />
+          <Image src={react} alt='React js' width={50} height={50} />
           <p>React js</p>
         </div>
         <div className="techContainer">
-          <Image src={html} alt='HTML5' width={30} height={30} />
+          <Image src={html} alt='HTML5' width={50} height={50} />
           <p>HTML5</p>
         </div>
         <div className="techContainer">
-          <Image src={css} alt='CSS3' width={30} height={30} />
+          <Image src={css} alt='CSS3' width={50} height={50} />
           <p>CSS3</p>
         </div>
         <div className="techContainer">
-          <Image src={node} alt='Node js' width={30} height={30} />
+          <Image src={node} alt='Node js' width={50} height={50} />
           <p>Node js</p>
         </div>
         <div className="techContainer">
-          <Image src={theme === "dark" ? nextjs : nextjsdark} alt='Next js' width={30} height={30} />
+          <Image src={theme === "dark" ? nextjs : nextjsdark} alt='Next js' width={50} height={50} />
           <p>Next js</p>
         </div>
         <div className="techContainer">
-          <Image src={sequelize} alt='Sequelize' width={30} height={30} />
+          <Image src={sequelize} alt='Sequelize' width={50} height={50} />
           <p>Sequelize</p>
         </div>
         <div className="techContainer">
-          <Image src={tailwind} alt='Tailwind' width={30} height={30} />
+          <Image src={tailwind} alt='Tailwind' width={50} height={50} />
           <p>Tailwind</p>
         </div>
         <div className="techContainer">
-          <Image src={redux} alt='Redux' width={30} height={30} />
+          <Image src={redux} alt='Redux' width={50} height={50} />
           <p>Redux</p>
         </div>
         <div className="techContainer">
-          <Image src={git} alt='Git' width={30} height={30} />
+          <Image src={git} alt='Git' width={50} height={50} />
           <p>Git</p>
         </div>
         <div className="techContainer">
-          <Image src={github} alt='Github' width={30} height={30} />
+          <Image src={github} alt='Github' width={50} height={50} />
           <p>Github</p>
         </div>
       </div>
