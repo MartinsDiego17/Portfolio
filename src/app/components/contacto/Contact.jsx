@@ -23,9 +23,9 @@ const Contact = () => {
 
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if(name.length < 1) {
+    if (name.length < 1) {
       Swal.fire({
-        icon:"error",
+        icon: "error",
         title: msj1,
         showClass: {
           popup: `
@@ -45,9 +45,9 @@ const Contact = () => {
       return;
     }
 
-    if(!regexEmail.test(email)) {
+    if (!regexEmail.test(email)) {
       Swal.fire({
-        icon:"error",
+        icon: "error",
         title: msj2,
         showClass: {
           popup: `
@@ -67,9 +67,9 @@ const Contact = () => {
       return;
     }
 
-    if(mensaje.length < 1) {
+    if (mensaje.length < 1) {
       Swal.fire({
-        icon:"error",
+        icon: "error",
         title: msj3,
         showClass: {
           popup: `
@@ -114,7 +114,7 @@ const Contact = () => {
             `
           }
         });
-    
+
       }, (error) => {
         console.log(error)
       });
@@ -134,40 +134,56 @@ const Contact = () => {
 
 
   return (
-    <div className='fatherContact' >
-      <div className={'contactChildren ' + theme}>
+    <div className={`contactContainer ${theme}`}>
 
-        <section>
+      <section>
 
-          <article className='questions' >
-            <h2>{text1} <br />{text2} </h2>
-            <h4>{frase} </h4>
-            <p className='firstP' ><i className="fa-regular fa-envelope"></i> martinsdiego0513@outlook.es</p>
-            <p><i className="fa-solid fa-location-dot"></i> Buenos Aires, Argentina</p>
-            <h5>
-              <Link href='https://www.linkedin.com/in/diego-martins-563954278/' target='_BLANK' ><i className="fa-brands fa-linkedin"></i>
-              </Link>
-              <Link href='https://github.com/MartinsDiego17' target='_BLANK'><i className="fa-brands fa-github"></i>
-              </Link>
-              <Link href={'mailto:martinsdiego0513@outlook.es'}><i className  ="fa-solid fa-envelope"></i></Link>
-            </h5>
-            <p></p>
-          </article>
+        <article className='textAndLinks'>
+          <div>
+            <h1>{text1} <br /> {text2}</h1>
+            <p>{frase}</p>
+          </div>
+          <div>
+            <p className='dataContact'>
+              <span><i className="lastIcon  fa-solid fa-envelope"></i></span>
+              martinsdiego0513@outlook.es
+            </p>
+            <p className='dataContact'>
+              <span><i className="lastIcon  fa-solid fa-location-dot"></i></span>
+              Buenos Aires, Argentina
+            </p>
+          </div>
+          <div className='redes'>
+            <Link href='https://www.linkedin.com/in/diego-martins-563954278/' target='_BLANK' >
+              <span>
+                <i className="fa-brands fa-linkedin"></i>
+              </span>
+            </Link>
+            <Link href='https://github.com/MartinsDiego17' target='_BLANK'>
+              <span>
+                <i className="fa-brands fa-github"></i>
+              </span>
+            </Link>
+            <Link href='mailto:martinsdiego0513@outlook.es'>
+              <span>
+                <i className="lastIcon  fa-solid fa-envelope"></i>
+              </span>
+            </Link>
+          </div>
+        </article>
 
-          <article className='form' >
-            <form ref={form} onSubmit={sendEmail} >
-              <input value={name} type="text" placeholder={ph1} name='user_name' onChange={(e) => setName(e.target.value)} />
-              <input value={email} type="email" placeholder='Email' name="user_email" onChange={(e) => setEmail(e.target.value)} />
-              <textarea value={mensaje} type="text" placeholder={ph3} name="message" onChange={(e) => setMensaje(e.target.value)} />
-              <button>{boton}</button>
-            </form>
-          </article>
+        <article className='formContact'>
+          <form ref={form} onSubmit={sendEmail} >
+            <input autoComplete='off'   value={name} type="text" placeholder={ph1} name='user_name' onChange={(e) => setName(e.target.value)} />
+            <input autoComplete='off' value={email} type="email" placeholder='Email' name="user_email" onChange={(e) => setEmail(e.target.value)} />
+            <textarea autoComplete='off' value={mensaje} type="text" placeholder={ph3} name="message" onChange={(e) => setMensaje(e.target.value)} />
+            <button>{boton}</button>
+          </form>
+        </article>
 
-        </section>
+      </section>
 
-      </div>
     </div>
-
   )
 }
 

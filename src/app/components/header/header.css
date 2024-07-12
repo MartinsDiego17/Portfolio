@@ -43,13 +43,14 @@
 .navContainer.light {
     animation: blurLight linear both;
     animation-timeline: scroll();
+    color: #222;
     animation-range: 0 500px;
 }
 
 @keyframes blurDark {
     to {
         margin-top: 10px;
-        background-color: rgba(95, 95, 95, 0.35);
+        background-color: rgba(95, 95, 95, 0.55);
         backdrop-filter: blur(30px);
     }
 }
@@ -57,7 +58,8 @@
 @keyframes blurLight {
     to {
         margin-top: 10px;
-        background-color: rgba(95, 95, 95, 0.45);
+        color: #eee;
+        background-color: rgba(95, 95, 95, 0.55);
         backdrop-filter: blur(30px);
     }
 }
@@ -68,4 +70,25 @@
 
 .navContainer.dark ul li:hover {
     color: white;
+}
+
+@media (max-width: 729px) {
+    .patherNav {
+        margin: 0 auto;
+        display: block;
+    }
+    .patherNav .navContainer {
+        width: 80%;
+        padding: 10px 15px;
+    }
+    .patherNav .navContainer * {
+        margin: 0;
+        padding: 0;
+    }
+    .patherNav .navContainer ul {
+        justify-content: space-evenly;
+    }
+    .navContainer ul li {
+        font-size: 12px;
+    }
 }

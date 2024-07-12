@@ -184,7 +184,7 @@
 @media (max-width: 729px) {
 
     .presentationContainer .openAndRedes {
-        margin-top: 3vh;
+        margin-top: 5vh;
     }
 
     .presentationContainer .openAndRedes .textRed {
@@ -381,11 +381,11 @@
     font-size: .7rem;
     margin: 0;
     height: 1.4rem;
-    padding: 0 12px;
+    padding: 0 8px;
+
     border-radius: 5px;
     display: flex;
     align-items: center;
-    width: fit-content;
 }
 
 .openAndRedes {

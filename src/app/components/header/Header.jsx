@@ -4,7 +4,6 @@ import './header.css';
 import { useStoreLenguaje, useStoreTheme } from '@/app/zustand';
 import { MdOutlineWbSunny } from "react-icons/md";
 import lenguajeIcon from './lenguajeIcon.svg';
-import lenguajeIcon2 from './lenguajeIcon2.svg';
 import Burguer from './burguer/Burguer';
 import Image from 'next/image';
 
@@ -20,7 +19,6 @@ const Header = () => {
     }
     const fnChangeTheme = (li) => {
         changeTheme();
-        scroll(null, li);
         const body = document.getElementsByTagName('body')[0];
         if (body.classList[1]) {
             body.classList.remove('bodyLight');
@@ -42,12 +40,11 @@ const Header = () => {
                         <li>{inicio}</li>
                         <li>{acerca}</li>
                         <li>{proyectos}</li>
-                        <li>{contacto}</li>
                         <li onClick={fnChangeTheme}><MdOutlineWbSunny /></li>
                         <li
                             className='lenguaje'
                             onClick={fnChangeCurrentLenguaje} >
-                            <Image src={theme === "dark" ? lenguajeIcon : lenguajeIcon2} />
+                            <Image src={lenguajeIcon} />
                         </li>
                     </ul>
                 </div>

@@ -14,7 +14,9 @@ const Job = ({ name, date, title, description, habilities, type, link }) => {
             <div className='divHabilities'>
                 {
                     habilities.map((hab, index) => (
-                        <span className={`habSpan ${!index && "firstHab"}`} >{hab}</span>
+                        <div>
+                            <span className={`habSpan ${!index && "firstHab"}`} >{hab}</span>
+                        </div>
                     ))
                 }
             </div>

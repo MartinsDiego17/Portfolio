@@ -1,268 +1,192 @@
-    .contactChildren {
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-        padding: 5% 10%;
-        background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('./mesh.jpg');
-        background-size: cover;
-        background-position: left center;
-    }
+.contactContainer {
+    height: 50vh;
+    position: relative;
+    padding: 2% 10%;
+    overflow: hidden;
+    color: #eee;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../../../../public/contact/bgcontact.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-    .contactChildren h2 {
-        color: white;
-        font-size: 3.5rem;
-        line-height: 1;
-        margin-bottom: 0;
-    }
+.contactContainer article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-    .contactChildren h4 {
-        margin-top: 0%;
-        font-weight: 500;
-        color: #bbb;
-        font-size: 1rem;
-        margin-bottom: 3%;
-    }
+.contactContainer h1 {
+    margin-bottom: 0;
+    font-size: 3rem;
+    line-height: 1;
+}
 
-    .contactChildren .questions {
-        width: 50%;
-    }
+.contactContainer p {
+    margin-top: 0;
+    color: #aaa;
+}
 
-    .contactChildren p {
-        color: white;
-        margin-top: 0;
-        opacity: .7;
-        font-size: .8rem;
-        font-weight: 400;
-        line-height: 1;
-    }
+.textAndLinks .dataContact {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1%;
+    font-size: .8rem;
+    color: #eee;
+}
 
-    .contactChildren p i {
-        color: rgb(0, 153, 255);
-    }
+.textAndLinks .dataContact span {
+    margin-right: 2%;
+    font-size: .7rem;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    padding: 2px;
+    color: #09f;
+    border-radius: 50%;
+}
 
-    .contactChildren h5 a {
-        color: #09f;
-    }
+.redes {
+    margin-top: 4%;
+    gap: 10px;
+    display: flex;
+}
 
-    .contactChildren h5 {
-        margin-top: 0;
-        font-size: 2rem;
-    }
+.redes span {
+    margin-right: 1%;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 
-    .contactChildren h5 a:first-child {
-        margin-right: 1%;
-    }
+.redes a {
+    text-decoration: none;
+    color: #eee;
+    opacity: .7;
+    display: flex;
+    align-items: center;
+    width: 35px;
+    border-radius: 30px;
+    height: 35px;
+    background: linear-gradient(45deg, rgb(0, 8, 80), rgb(0, 9, 131));
+    transition: .2s;
+}
 
-    .contactChildren h5 a {
-        transition: .2s;
-    }
+.redes a:hover {
+    opacity: 1;
+}
 
-    .contactChildren h5 a:hover {
-        color: rgb(56, 175, 255);
-    }
+.contactContainer section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
 
-    .contactChildren section {
-        display: flex;
-        align-items: center;
-    }
+.contactContainer .textAndLinks,
+.contactContainer .formContact {
+    width: 50%;
+}
 
-    .contactChildren h5 a:first-child,
-    .contactChildren h5 a:nth-child(2),
-    .contactChildren h5 a:last-child {
-        margin-right: 2%;
-    }
+.contactContainer .formContact {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
 
-    .contactChildren .questions .firstP {
-        margin-bottom: 1%;
-    }
+.formContact * {
+    padding: 0;
+    margin: 0;
+}
 
-    .contactChildren .form {
+.formContact form {
+    display: flex;
+    width: 75%;
+    padding: 4% 2%;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    background: linear-gradient(to right, #04102e, #04102e, #04102e, #001d3f, #001d3f);
+}
+
+.contactContainer form input,
+.contactContainer form textarea {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 4%;
+    background: linear-gradient(to bottom, #002046, #071a4b);
+    border: none;
+    color: white;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    border: solid 2px #071a4b;
+}
+
+.contactContainer form input:focus,
+.contactContainer form textarea:focus {
+    border-color: rgb(0, 38, 143);
+}
+
+.contactContainer textarea {
+    resize: none;
+    min-width: 90%;
+    max-width: 90%;
+    min-height: 10vh;
+    max-height: 10vh;
+}
+
+.contactContainer form button {
+    background-color: #09f;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .2s;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 4%;
+    color: #fff;
+}
+
+.contactContainer form button:hover {
+    background-color: rgb(53, 174, 255);
+}
+
+@media (max-width: 729px) {
+    .contactContainer {
         height: fit-content;
-        padding: 2% 0;
-        width: 30%;
-        background-color: #051725;
-        border-radius: 5px;
     }
 
-    .contactChildren .form input,
-    .contactChildren .form textarea {
-        width: 90%;
+    .contactContainer section {
         display: block;
-        margin: 0 auto;
-        margin-top: 4%;
-        background-color: #0c3250;
-        border: none;
-        color: white;
-        outline: none;
-        border-radius: 10px;
-        padding: 10px 10px;
-        border: solid 2px transparent;
     }
 
-    .contactChildren .form textarea {
-        min-width: 90%;
-        max-width: 90%;
-        min-height: 15vh;
-        max-height: 15vh;
-        resize: none;
+    .contactContainer section article {
+        width: 80vw !important;
+        align-items: center;    
     }
 
-    .contactChildren .form input:first-child {
-        margin-top: 0%;
+    .contactContainer .textAndLinks {
+        text-align: center;
     }
 
-    .contactChildren .form input:focus,
-    .contactChildren .form textarea:focus {
-        border: solid 2px rgb(0, 85, 141);
+    .contactContainer .formContact {
+        margin-top: 10%;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+    .contactContainer .formContact form {
+        width: 80vw ;
     }
 
-    .contactChildren button {
-        display: block;
-        width: 96%;
-        margin: 0 auto;
-        margin-top: 4%;
-        padding: 10px 0;
-        background-color: #09f;
-        color: white;
-        border: none;
-        outline: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: .2s;
-    }
-
-    .contactChildren button:hover {
-        background-color: rgb(56, 175, 255);
-    }
-
-    .contactChildren p i {
-        width: 3%;
-    }
-
-    .fatherContact .light {
-        background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('./white.png');
-    }
-
-    .fatherContact .light h4 {
-        color: white;
-    }
-
-    .fatherContact .light .form {
-        background-color: #eee;
-    }
-
-    .fatherContact .light input,
-    .fatherContact .light textarea {
-        background-color: #ccc;
-        color: black;
-    }
-
-    .fatherContact textarea {
-        font-family: sans-serif;
-        font-weight: 500;
-    }
-
-    @media (max-width:729px) {
-        .contactChildren section {
-            margin: 0 auto;
-            display: block;
-        }
-
-        .contactChildren .questions {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        .contactChildren .questions h2 {
-            font-size: 2rem;
-            width: 80%;
-            text-align: center;
-        }
-
-        .contactChildren .questions h4 {
-            width: 80%;
-            text-align: center;
-        }
-
-        .contactChildren p {
-            width: 80%;
-            text-align: center;
-            font-size: .7rem;
-        }
-
-        .contactChildren .questions h5 {
-            width: 80%;
-            text-align: center;
-        }
-
-        .contactChildren .questions h5 a {
-            font-size: 2rem;
-        }
-
-        .contactChildren .form {
-            width: 80%;
-        }
-
-    }
-
-    @media (max-width:1000px) {
-        .contactChildren .questions h2 {
-            font-size: 2rem;
-        }
-
-        .contactChildren .questions h4 {
-            font-size: .8rem;
-        }
-
-        .contactChildren .questions p {
-            font-size: .7rem;
-        }
-
-        .contactChildren .questions h5 {
-            font-size: 1.3rem;
-        }
-
-        .contactChildren .form input {
-            padding: 5px 8px;
-        }
-
-        .contactChildren .form textarea {
-            padding: 8px;
-        }
-
-    }
-
-    @media (min-width:1600px) {
-        .contactChildren .questions h2 {
-            font-size: 74.66px;
-        }
-
-        .contactChildren .questions h4 {
-            font-size: 1.2rem;
-        }
-
-        .contactChildren .questions p {
-            font-size: 1.1rem;
-        }
-
-        .contactChildren .questions h5 {
-            font-size: 2rem;
-        }
-
-        .contactChildren .form input {
-            padding: 13px;
-        }
-
-        .contactChildren .form {
-            width: 25%;
-        }
-
-        .contactChildren .form textarea {
-            padding: 13px;
-        }
-
-        .contactChildren .form button {
-            padding: 15px;
-        }
-
-    }
+}

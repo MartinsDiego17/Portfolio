@@ -31,7 +31,7 @@
     flex-direction: column;
     width: 10vw;
     height: 11vw;
-    transition: .5s;
+    transition: .3s;
     opacity: .8;
     border: solid 1px transparent;
     position: relative;
@@ -45,7 +45,6 @@
     left: -100%;
     width: 300%;
     height: 300%;
-    background: linear-gradient(45deg, transparent, rgb(0, 6, 95));
     transition: top .5s ease, left .5s ease;
     z-index: 0;
 }
@@ -62,8 +61,8 @@
 
 .stackContainer .techContainer:hover {
     opacity: 1;
-    border-color: rgb(0, 2, 134);
     filter: brightness(110%);
+    background-color: rgb(0, 6, 95);
     transform: scale(1.07);
 }
 
@@ -91,7 +90,7 @@
 }
 
 .stackContainer.light .techContainer p {
-    color: inherit;
+    color: #222;
 }
 
 @media (max-width: 729px) {

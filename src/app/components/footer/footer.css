@@ -21,8 +21,8 @@
 .footer a:first-child, 
 .footer a:nth-child(2),
 .footer .lastIcon {
-    margin-right: .5%;
-    margin-left: .5%;
+    margin-right: 1%;
+    margin-left: 1%;
 }
 
 .footer p {
