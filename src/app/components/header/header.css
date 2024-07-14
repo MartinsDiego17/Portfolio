@@ -53,6 +53,7 @@
         opacity: .4;
         background-color: rgba(0, 0, 0, 0.45);
         backdrop-filter: blur(30px);
+        transition: .3s;
     }
 }
 

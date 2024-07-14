@@ -141,7 +141,7 @@ const Contact = () => {
         <article className='textAndLinks'>
           <div>
             <h1>{text1} <br /> {text2}</h1>
-            <p>{frase}</p>
+            <p className='paragraph'>{frase}</p>
           </div>
           <div>
             <p className='dataContact'>

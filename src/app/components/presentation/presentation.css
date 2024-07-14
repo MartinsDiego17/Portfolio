@@ -389,16 +389,16 @@
 
 .openAndRedes {
     display: flex;
+    align-items: center;
     justify-content: flex-start;
     gap: 10px;
 }
 
 .openAndRedes button {
     width: fit-content;
-    padding: .8vw;
+    padding: 3px 10px;
     display: flex;
     align-items: center;
-    height: 1.4vw;
     border-radius: 50px;
     background-color: #222;
 }
@@ -428,4 +428,16 @@
 
 .light .openAndRedes button * {
     color: #222;
+}
+
+@media (max-width: 1000px) {
+    .openAndRedes {
+        justify-content: center;
+    }
+    .openAndRedes h6 {
+        font-size: 12px;
+    }
+    .openAndRedes button {
+        padding: 5px;
+    }
 }

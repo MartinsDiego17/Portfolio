@@ -97,3 +97,12 @@
         height: 10vh;
     }
 }
+
+@media(max-width:1000px) {
+    .patherAbout section article.about p {
+        font-size: 1.8vh;
+    }
+    .patherAbout .jobFather p {
+        font-size: 2vh;
+    }
+}

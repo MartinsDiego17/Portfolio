@@ -51,7 +51,7 @@ const Presentation = () => {
                     <h2>{text}</h2>
                     <p>{parrafo}</p>
                     <div className='openAndRedes' >
-                        <h6>{openToWork}</h6> 
+                        <h6>{openToWork}</h6>
                         <button>
                             <Link href='https://www.linkedin.com/in/diego-martins-563954278/' target='_BLANK' >
                                 <i className="fa-brands fa-linkedin links "></i><span className='textRed' >Linkedin</span>

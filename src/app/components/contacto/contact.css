@@ -174,7 +174,7 @@
 
     .contactContainer section article {
         width: 80vw !important;
-        align-items: center;    
+        align-items: center;
     }
 
     .contactContainer .textAndLinks {
@@ -186,8 +186,28 @@
         align-items: center;
         margin-bottom: 10%;
     }
+
     .contactContainer .formContact form {
-        width: 80vw ;
+        width: 80vw;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .contactContainer h1 {
+        font-size: 5vh;
+    }
+
+    .contactContainer .textAndLinks .paragraph {
+        font-size: 2vh;
+    }
+
+    .contactContainer .dataContact {
+        font-size: 1.7vh;
+    }
+    .contactContainer .dataContact span {
+        font-size: 1.3vh;
+        background-color: transparent;
     }
 
 }
